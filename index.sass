@@ -1,0 +1,526 @@
+*
+  border: solid  1px
+  font-family: "標楷體"
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+@mixin wh($w , $h)
+  width: $w
+  height: $h
+
+@mixin center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50% , -50%)
+
+
+.indeximg
+  background-image: url('./bgimg/streeimg1.jpg')
+  height: 100vh
+  position: fixed
+  background-size: cover
+  background-position: center center
+  width: 100%
+  top: 0
+  left: 0
+
+//========== 頂部
+.tbar
+  position: fixed
+  display: flex
+  z-index: 2
+  align-items: center
+  background-color: #901317
+  +wh(100% , 30px)
+
+  .wtbar
+    color: white
+    position: relative
+    left: 10%
+    font-size: 20px
+    font-weight: 700
+    opacity: 0.8
+    &:hover
+      opacity: 1
+
+  .back
+    position: absolute
+    right: 10%
+    display: flex
+    align-items: center
+    cursor: pointer
+    opacity: 0.8
+    &:hover
+      opacity: 1
+    .icon
+      font-size: 20px
+      color: white
+    .tback
+      font-size: 15px
+      margin-left: 5px
+      color: white
+//========== 頂部
+
+//==========  功能選單
+
+.fltbar
+  position: fixed
+  top: 30px
+  z-index: 2
+  background-image: url("./bgimg/pic3.jpg")
+  display: flex
+  align-items: center
+  opacity: 0.8
+  +wh(100% , 100px)
+  .flpic
+    position: relative
+    background-image: url("./bgimg/mark12.png")
+    left: 10%
+    opacity: 1
+    cursor: pointer
+    +wh(174px , 80px)
+    &:hover
+      transition: 0.3s
+      opacity: 0.6
+      
+
+  .flword
+    position: absolute
+    display: flex
+    right: 15% 
+    backdrop-filter: blur(10px)
+    .w
+      margin: 10px
+      cursor: pointer
+      font-size: 30px
+      font-weight: 700
+      opacity: 1
+      &:hover
+        opacity: 0.7
+    @media screen and (max-width: 1200px)
+      opacity: 0
+      
+  .line
+    position: absolute
+    right: 5%
+    +wh(30px , 30px)
+    display: none
+    .li
+      background-color: white
+      border-radius: 3px
+      margin: 3px 0 0 0
+      pointer-events: none
+      +wh(100% , 6px)
+    @media screen and (max-width: 1200px)
+      display: block
+      transition: 1s
+      pointer-events: auto
+      cursor: pointer
+//==========  功能選單
+
+//======= 側邊拉選單
+.leftbar-shadow
+  position: fixed
+  +wh(100% , 100%)
+  &.change
+    background-color: #000
+    z-index: 997
+    opacity: 0.6
+
+.leftbar-box
+  position: fixed
+  z-index: 999
+  top: 0px
+  left: 0px
+  background-color: #901317
+  border-radius: 0 50px 50px 0 
+  transform: translateX(-100%)
+  +wh(300px, 100%)
+  @media screen and (max-width: 1200px)
+    transition: 1s
+    transform: translateX(-100%)
+    &.change
+      transition: 1s
+      transform: translateX(0)
+
+  .leftbar-img 
+    position: relative
+    top: 4%
+    text-align: center
+  
+  .leftbar-word
+    position: relative
+    top: 10%
+    text-align: center
+    
+    .l
+      padding: 20px 0 20px 0 
+      font-size: 30px
+      font-weight: 700
+      cursor: pointer
+      opacity: 0.7
+      &:hover
+        opacity: 1
+//======= 側邊拉選單
+
+//======= 首頁輪播
+.midImg-box 
+  +wh(100% , 950px)
+
+  .boxImg
+    position: relative
+    background-image: url('./bgimg/pic1.jpg')
+    display: flex
+    justify-content: center
+    .midBox 
+      position: relative
+      height: 100%
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+      font-size: 14px
+      color: #000
+      margin: 0
+      padding: 0
+      +wh(80% , 950px)
+
+    .swiper
+      width: 100%
+      height: 100%
+
+    .swiper-slide
+      text-align: center
+      font-size: 18px
+      background: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      
+      img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+//======= 首頁輪播
+
+//=======  商品按鈕-展示
+.commodity-box
+  position: relative
+  background-image: url('./bgimg/pic5.jpg')
+  background-repeat: no-repeat
+  display: flex
+  +wh(100% , 400px)
+
+  //======= 左邊商品按鈕
+  .commoditybtn-inbox
+    position: relative
+    // padding: 60px 90px 0 90px
+    +wh(50% , 100%)
+
+    .commodity-cbox
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50% , -50%)
+
+
+    .commodity
+      font-size: 60px
+      font-weight: 700
+      margin: 30px
+      text-align: center
+      width: fit-content
+      text-shadow: 0.2em 0.2em 0.3em white
+      display: block
+      &:hover
+        cursor: pointer
+        // transition: 2s
+        text-shadow: 0.2em 0.2em 0.3em #FFA970
+  //======= 左邊商品按鈕
+  //======= 右邊商品圖片
+  .commodityimg-inbox
+    position: relative
+    +wh(50% , 100%)
+    
+    .commodityimg-box
+      +center
+      +wh(90% , 80%)
+
+      .commodity-change
+        position: relative
+        height: 100%
+        background: #eee
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+        font-size: 14px
+        color: #000
+        margin: 0
+        padding: 0
+        
+
+        .swiper
+          width: 100%
+          height: 100%
+
+        .swiper-slide
+          text-align: center
+          font-size: 18px
+          background: #fff
+          display: flex
+          justify-content: center
+          align-items: center
+          
+
+        img
+          display: block
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+        .swiper
+          width: 100%
+          height: 70%
+          margin-left: auto
+          margin-right: auto
+
+        .mySwiper12
+          height: 80%
+          width: 100%
+          
+          .swiper-slide
+            background-size: cover
+            background-position: center
+
+
+        .mySwiper11
+          height: 20%
+          box-sizing: border-box
+          padding: 10px 0
+
+          .swiper-slide
+            width: 25%
+            height: 100%
+            opacity: 0.4
+
+          .swiper-slide-thumb-active
+            opacity: 1
+
+          .swiper-slide img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+  //======= 右邊商品圖片
+
+  //======= 故事介紹
+.story-box
+  position: relative
+  display: flex
+  +wh(100% , 520px)
+
+  .box-shadow
+    position: absolute
+    background-color: white
+    opacity: 0.3
+    +wh(100% , 520px)
+
+  .story-img-box
+    position: relative
+    +wh(50% , 100%)
+
+    .b
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: 15px 15px 30px 0px
+      backdrop-filter: blur(10px)
+      +wh(45% , 47%)
+
+    .box1
+      top: 15%
+      left: 5%
+      padding: 5px 5px
+      img
+        width: 100%
+        height: 100%
+        object-fit: contain
+      @media screen and (max-width: 1440px)
+        position: absolute
+        display: inline-block
+        top: 0
+        left: auto
+        right: auto
+
+    .box2
+      bottom: 15%
+      right: 3%
+      img
+        width: 100%
+        height: 100%
+        object-fit: contain
+      @media screen and (max-width: 1440px)
+        bottom: 0
+        right: 3%
+
+  
+
+  .story-word-box
+    position: relative
+    +wh(50% , 100%)
+    .wordbox
+      background-color: #fff
+      border-radius: 30px
+      opacity: 0.5
+      +center
+      +wh(70% , 80%)
+      &:hover
+        opacity: 0.8
+      @media screen and (max-width: 1633px)
+        +wh(70% , 100%)
+    .word
+      position: absolute
+      top: 43%
+      left: 50%
+      transform: translate(-50% , -50%)
+      font-size: 25px
+      font-weight: 700
+      +wh(50% , 50%)
+      @media screen and (max-width: 1633px)
+        
+        top: 25%
+      
+
+.end-box
+  position: relative
+  background-color: #901317
+  +wh(100% , 400px)
+
+  .end-inbox
+    position: relative
+    display: flex
+    +center
+    +wh(60% , 50%)
+
+    .end1
+      display: flex
+      justify-content: center
+      align-items: center
+      +wh(20%, 100%)
+
+      .mark
+        background-image: url('./bgimg/mark12.png')
+        cursor: pointer
+        +wh(174px , 80px)
+        &:hover
+          opacity: 0.7
+
+    .end2
+      text-align: center
+      +wh(20%, 100%)
+
+      .menu,.commodity
+        position: relative
+        font-size: 22px
+        font-weight: 100   
+        color: #D6D6D6 
+
+        p
+          margin: 10px 0 10px 0 
+          cursor: pointer
+          &:hover
+            color: white
+  
+    .fb-box
+      +wh(40% , 147px)
+
+      .fb
+        position: relative
+        background-image: url('./bgimg/fbimg.png')
+        left: 5%
+        +wh(400px, 147px)
+        *
+            font-family: "微軟正黑體"
+        .fb-shadow
+          position: absolute
+          background-image: linear-gradient(to top, #f4f4f4, #000000)
+          opacity: 0.5
+          +wh(400px, 147px)
+
+        .fb-top
+          display: flex
+          +wh(100% , 50%)
+
+          .fbimg
+            position: relative
+            left: 2%
+            top: 8%
+            background-image: url('./bgimg/fbimg1.png')
+            +wh(53px , 53px)
+
+          .fbword
+            font-weight: 100
+            position: relative
+            left: 2%
+            top: 8%
+            color: white
+            .fbtitle
+              width: fit-content
+              font-size: 25px
+              display: inline-block
+              &:hover
+                text-decoration: underline
+                
+        .fb-bottom 
+          position: absolute
+          display: flex
+          bottom: 0
+          +wh(100% , 25%)
+
+          .fb-bbox
+            position: relative
+            display: flex
+            align-items: center
+            left: 2%
+            background-color: #ffffff
+            cursor: pointer
+            +wh(115px , 25px)
+
+            .icon-facebook21
+              color: #3019c6
+              padding-left: 5px
+            .fb-flword
+              padding-left: 5px
+              font-size: 14px
+
+          .fb-sbox
+            position: relative
+            display: flex
+            align-items: center
+            right: -52%
+            background-color: #ffffff
+            cursor: pointer
+            +wh(60px , 25px)
+
+            .sicon
+              color: #787373
+              padding-left: 5px
+            .fb-sword
+              padding-left: 5px
+              font-size: 14px
+
+      .opword
+        color: white
+        text-align: center
+
+.ShenQ
+  position: relative
+  background-color: black
+  +wh(100% , 25px)
+
+  .ShenQ-word
+    text-align: center
+    color: white
+    padding: 3px
+    font-size: 12px
+
+

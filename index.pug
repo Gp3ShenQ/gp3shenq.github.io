@@ -1,0 +1,177 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./index.css")
+        link(rel="stylesheet", href="./iconmoon/style.css")
+        script(src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous")
+        script(defer src="./index.js") 
+        title 豐味堂
+        link(rel="shortcut icon", href="./bgimg/favicon.png")
+        meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css')
+        script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+    body 
+        .indeximg
+        .tbar 
+            .wtbar
+                p 豐味堂
+            .back
+                .t.icon 
+                    .icon-home
+                .t.tback
+                    p 回首頁 
+    
+        .fltbar 
+            .flpic 
+            .flword
+                .w.fl1
+                    p 餅的故事
+                .w.fl2 
+                    p 所有商品
+                .w.fl3 
+                    p 門市據點
+                .w.fl4 
+                    p 常見問題
+                .w.fl5 
+                    p 聯絡我們
+            .line 
+                .li.line1 
+                .li.line2 
+                .li.line3 
+
+        .leftbar-shadow
+        .leftbar-box 
+            .leftbar-img 
+                img(src="./bgimg/leftbarimg.png", alt="")
+            .leftbar-word
+                .l.bar1 
+                    p 餅的故事
+                .l.bar2 
+                    p 所有商品
+                .l.bar3 
+                    p 門市據點
+                .l.bar4 
+                    p 常見問題
+                .l.bar5 
+                    p 聯絡我們
+        
+        .midImg-box 
+            .boxImg
+                .midBox 
+                    .swiper.mySwiper
+                        .swiper-wrapper
+                            .swiper-slide 
+                                img(src="./bgimg/pic10.jpg", alt="")
+                            .swiper-slide 
+                                img(src="./bgimg/pic11.jpg", alt="")
+                            .swiper-slide 
+                                img(src="./bgimg/pic12.jpg", alt="")
+                            .swiper-slide 
+                                img(src="./bgimg/pic13.jpg", alt="")
+                            .swiper-slide 
+                                img(src="./bgimg/pic14.jpg", alt="")
+                        .swiper-button-next
+                        .swiper-button-prev
+                        .swiper-pagination
+    
+        .commodity-box
+            .commoditybtn-inbox
+                .commodity-cbox
+                    .commodity.btn1
+                        p 太陽餅
+                    .commodity.btn2 
+                        p 檸檬餅
+                    .commodity.btn3
+                        p 綜合系列
+            .commodityimg-inbox
+                .commodityimg-box
+                    .commodity-change
+                        .swiper.mySwiper12(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="./bgimg/comm1.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./bgimg/comm2.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./bgimg/comm3.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./bgimg/comm4.jpg", alt="")
+                            .swiper-button-next11
+                            .swiper-button-prev11
+                        .swiper.mySwiper11(thumbsslider='')
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="./bgimg/comm1.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./bgimg/comm2.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./bgimg/comm3.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./bgimg/comm4.jpg", alt="")
+                            
+        .story-box 
+            .box-shadow 
+            .story-img-box
+                .b.box1
+                    img(src="./bgimg/commodity1.jpg", alt="")
+                .b.box2
+                    img(src="./bgimg/commodity2.jpg", alt="")
+            .story-word-box 
+                .wordbox
+                .word
+                    p &nbsp;&nbsp;太陽餅在台中地區的製作和銷售可以追溯到早期的台灣日治時期（1895年-1945年）。在當時，台灣的糕餅業開始蓬勃發展，太陽餅作為其中的一種特色糕點逐漸受到歡迎。
+                    br
+                    p &nbsp;&nbsp;許多傳統糕餅店在台中地區開始製作太陽餅，並且將其作為招牌產品之一。這些店家通常以家族經營為主，世代相傳，各自保持著獨特的製作方法和口味。因此，可以說台中太陽餅的起源是多元而多樣的。
+
+        .end-box 
+            .end-inbox 
+                .end1
+                    .mark
+                .end2
+                    .menu
+                        .m1 
+                            p 所有商品
+                        .m2
+                            p 門市據點
+                        .m3
+                            p 常見問題
+                        .m4
+                            p 聯絡我們
+                .end2
+                    .commodity 
+                        .c1 
+                            p 太陽餅
+                        .c2 
+                            p 檸檬餅
+                        .c3 
+                            p 綜合系列
+                .fb-box 
+                    .fb
+                        .fb-shadow
+                        .fb-top 
+                            .fbimg 
+                            .fbword
+                                .fbtitle 
+                                    p 豐味堂
+                                .fbfans 
+                                    p 2,014,280位追蹤者
+                        .fb-bottom 
+                            .fb-bbox
+                                .flicon 
+                                    .icon-facebook21
+                                .fb-flword 
+                                    p 追蹤粉絲專頁
+                            .fb-sbox 
+                                .sicon 
+                                    .icon-redo2
+                                .fb-sword
+                                    p 分享
+                    .opentime 
+                        .opword 
+                            p | 營業時間：上午8:30 – 下午8:30 |
+
+        .ShenQ 
+            .ShenQ-word     
+                p ◎ ShenQ - 設計維護               
