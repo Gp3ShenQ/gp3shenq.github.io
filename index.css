@@ -589,16 +589,13 @@
     border-radius: 0;
     font-size: 20px;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
+  .map-box .mapwordbox .maptitle .icon {
+    text-align: center;
+  }
+}
+.map-box .mapwordbox .maptitle .icon-location2, .map-box .mapwordbox .maptitle .icon-phone-hang-up {
+  padding: 2px;
 }
 .map-box .mapwordbox .maptitle .mapadress, .map-box .mapwordbox .maptitle .mapphone {
   display: -webkit-box;
@@ -611,7 +608,8 @@
 @media screen and (max-width: 1000px) {
   .map-box .mapwordbox .maptitle .mapadress, .map-box .mapwordbox .maptitle .mapphone {
     font-size: 16px;
-    padding: 0;
+    padding: 0 0 0 40px;
+    line-height: 20px;
   }
 }
 
