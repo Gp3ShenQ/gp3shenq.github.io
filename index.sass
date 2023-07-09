@@ -401,6 +401,7 @@
   backdrop-filter: blur(15px)
   position: relative
   display: flex
+  align-items: center
   @media screen and (max-width: 1000px)
     flex-direction: column
 
@@ -409,26 +410,34 @@
     align-items: center
     justify-content: center
     width: 50%
+    padding-left: 50px
     @media screen and (max-width: 1000px)
       width: 100%
+      padding-right: 50px
 
     .mapapi
-      margin: 30px
+      // margin: 30px 0 30px 90px
+      width: 100%
+      iframe
+        width: 100%
       @media screen and (max-width: 1000px)
         margin-bottom: 0
 
   .mapwordbox
     width: 50%
+    padding-left: 50px
+    padding-right: 50px
     @media screen and (max-width: 1000px)
       width: 100%
+      padding: 0
       
 
     .maptitle
       background-color: #901317
       position: relative
-      width: 60%
+      width: 100%
       font-size: 30px
-      margin: 15%
+      // margin: 15%
       font-weight: 700
       padding: 20px
       border-radius: 20px
@@ -498,8 +507,6 @@
             background-image: url('./bgimg/mark13.png')
             +wh(100px , 100px)
             background-repeat: round
-
-          
 
       .end2
         text-align: center

@@ -519,6 +519,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 1000px) {
   .map-box {
@@ -539,14 +542,19 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 50%;
+  padding-left: 50px;
 }
 @media screen and (max-width: 1000px) {
   .map-box .mapapibox {
     width: 100%;
+    padding-right: 50px;
   }
 }
 .map-box .mapapibox .mapapi {
-  margin: 30px;
+  width: 100%;
+}
+.map-box .mapapibox .mapapi iframe {
+  width: 100%;
 }
 @media screen and (max-width: 1000px) {
   .map-box .mapapibox .mapapi {
@@ -555,18 +563,20 @@
 }
 .map-box .mapwordbox {
   width: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 @media screen and (max-width: 1000px) {
   .map-box .mapwordbox {
     width: 100%;
+    padding: 0;
   }
 }
 .map-box .mapwordbox .maptitle {
   background-color: #901317;
   position: relative;
-  width: 60%;
+  width: 100%;
   font-size: 30px;
-  margin: 15%;
   font-weight: 700;
   padding: 20px;
   border-radius: 20px;
