@@ -1,5 +1,5 @@
 *
-  border: solid  1px
+  // border: solid  1px
   font-family: "標楷體"
   box-sizing: border-box
   padding: 0
@@ -15,6 +15,13 @@
   left: 50%
   transform: translate(-50% , -50%)
 
+@mixin commsating
+  font-size: 22px
+  line-height: 50px
+  width: 50%
+  padding-left: 30px
+  font-weight: 500
+ 
 
 .indeximg
   background-image: url('./bgimg/streeimg1.jpg')
@@ -167,13 +174,14 @@
 
 //======= 首頁輪播
 .midImg-box 
-  +wh(100% , 950px)
+  // +wh(100% , 950px)
 
   .boxImg
     position: relative
     background-image: url('./bgimg/pic1.jpg')
     display: flex
     justify-content: center
+
     .midBox 
       position: relative
       height: 100%
@@ -182,7 +190,14 @@
       color: #000
       margin: 0
       padding: 0
-      +wh(80% , 950px)
+      +wh(80% , 100vh)
+
+      @media screen and (max-width: 768px)
+        height: 500px
+        margin-top: 130px
+      @media screen and (max-width: 600px)
+        height: 300px
+        margin-top: 130px
 
     .swiper
       width: 100%
@@ -207,125 +222,111 @@
 .commodity-box
   position: relative
   background-image: url('./bgimg/pic5.jpg')
-  background-repeat: no-repeat
+  background-repeat: round
   display: flex
-  +wh(100% , 400px)
+  width: 100%
 
   //======= 左邊商品按鈕
   .commoditybtn-inbox
     position: relative
-    // padding: 60px 90px 0 90px
-    +wh(50% , 100%)
-
+    width: 50%
+    
     .commodity-cbox
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50% , -50%)
-
+      position: relative
+      margin: 10px
+      display: flex
+      flex-direction: column
 
     .commodity
       font-size: 60px
       font-weight: 700
       margin: 30px
       text-align: center
-      width: fit-content
+      // width: fit-content
       text-shadow: 0.2em 0.2em 0.3em white
       display: block
       &:hover
         cursor: pointer
-        // transition: 2s
         text-shadow: 0.2em 0.2em 0.3em #FFA970
+      @media screen and (max-width: 1000px)
+        
+        font-size: 40px
+      @media screen and (max-width: 720px)
+        font-size: 25px
+        margin: 30px 0 30px 0 
+    .inner
+      // padding: 20px
+      display: flex
+      flex-wrap: wrap
+      text-align: center
+      @media screen and (max-width: 720px)
+        flex-wrap: nowrap
+        flex-direction: column
+        align-items: center
+
+      .comm
+        border: solid 3px rgba(255,255,255,0.5)
+        font-size: 20px
+        width: 50%
+        &:hover
+          cursor: pointer
+          transition: 0.2s
+          background-color: rgba(255,255,255,0.5)
+        @media screen and (max-width: 720px)
+          width: auto
   //======= 左邊商品按鈕
+
   //======= 右邊商品圖片
   .commodityimg-inbox
     position: relative
-    +wh(50% , 100%)
-    
+    width: 50%
+    overflow: hidden
+
     .commodityimg-box
       +center
-      +wh(90% , 80%)
 
       .commodity-change
         position: relative
-        height: 100%
-        background: #eee
+        // height: 30%
+        background: rgba(255,255,255,0)
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif
         font-size: 14px
         color: #000
-        margin: 0
+        margin: 0 
         padding: 0
-        
 
-        .swiper
+        .swiper11
           width: 100%
-          height: 100%
+          padding-top: 50px
+          padding-bottom: 50px
 
-        .swiper-slide
-          text-align: center
-          font-size: 18px
-          background: #fff
-          display: flex
-          justify-content: center
-          align-items: center
-          
-
-        img
-          display: block
-          width: 100%
-          height: 100%
-          object-fit: cover
-
-        .swiper
-          width: 100%
-          height: 70%
-          margin-left: auto
-          margin-right: auto
-
-        .mySwiper12
-          height: 80%
-          width: 100%
-          
           .swiper-slide
-            background-size: cover
             background-position: center
+            background-size: cover
+            width: 300px
+            height: 300px
 
-
-        .mySwiper11
-          height: 20%
-          box-sizing: border-box
-          padding: 10px 0
-
-          .swiper-slide
-            width: 25%
-            height: 100%
-            opacity: 0.4
-
-          .swiper-slide-thumb-active
-            opacity: 1
-
-          .swiper-slide img
-            display: block
-            width: 100%
-            height: 100%
-            object-fit: cover
+            img
+              display: block
+              width: 100%
   //======= 右邊商品圖片
 
   //======= 故事介紹
 .story-box
   position: relative
   display: flex
-  +wh(100% , 520px)
+  width: 100%
 
   .box-shadow
     position: absolute
     background-color: white
     opacity: 0.3
-    +wh(100% , 520px)
+    width: 100%
+    height: 100%
 
   .story-img-box
     position: relative
-    +wh(50% , 100%)
+    width: 50%
 
     .b
       position: absolute
@@ -335,6 +336,8 @@
       box-shadow: 15px 15px 30px 0px
       backdrop-filter: blur(10px)
       +wh(45% , 47%)
+      @media screen and (max-width: 1440px)
+        +wh(100% , 320px)
 
     .box1
       top: 15%
@@ -344,12 +347,6 @@
         width: 100%
         height: 100%
         object-fit: contain
-      @media screen and (max-width: 1440px)
-        position: absolute
-        display: inline-block
-        top: 0
-        left: auto
-        right: auto
 
     .box2
       bottom: 15%
@@ -358,85 +355,176 @@
         width: 100%
         height: 100%
         object-fit: contain
-      @media screen and (max-width: 1440px)
-        bottom: 0
-        right: 3%
+    @media screen and (max-width: 1440px)
+      display: flex
+      flex-direction: column
+      align-items: center
 
-  
+      .b
+        position: relative
+        top: auto
+        left: auto
+        right: auto
+        bottom: auto
+
+    @media screen and (max-width: 1000px)
+      display: none
+      
 
   .story-word-box
     position: relative
-    +wh(50% , 100%)
+    width: 50%
+    padding: 50px
+    display: flex
+    @media screen and (max-width: 1000px)
+      width: 100%
     .wordbox
-      background-color: #fff
+      background-color: rgba(#fff, .5)
       border-radius: 30px
-      opacity: 0.5
-      +center
-      +wh(70% , 80%)
-      &:hover
-        opacity: 0.8
+      margin: auto
       @media screen and (max-width: 1633px)
-        +wh(70% , 100%)
     .word
-      position: absolute
-      top: 43%
-      left: 50%
-      transform: translate(-50% , -50%)
+      padding: 50px 30px
       font-size: 25px
       font-weight: 700
-      +wh(50% , 50%)
+      line-height: 1.5
       @media screen and (max-width: 1633px)
-        
-        top: 25%
+        top: 30%
+      @media screen and (max-width: 1000px)
+        font-size: 20px
+      @media screen and (max-width: 600px)
+        font-size: 16px
+  //======= 故事介紹
+
+  //======= 地圖位置
+.map-box
+  backdrop-filter: blur(15px)
+  position: relative
+  display: flex
+  @media screen and (max-width: 1000px)
+    flex-direction: column
+
+  .mapapibox
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50%
+    @media screen and (max-width: 1000px)
+      width: 100%
+
+    .mapapi
+      margin: 30px
+      @media screen and (max-width: 1000px)
+        margin-bottom: 0
+
+  .mapwordbox
+    width: 50%
+    @media screen and (max-width: 1000px)
+      width: 100%
       
 
+    .maptitle
+      background-color: #901317
+      position: relative
+      width: 60%
+      font-size: 30px
+      margin: 15%
+      font-weight: 700
+      padding: 20px
+      border-radius: 20px
+      @media screen and (max-width: 1000px)
+        background-color: #B53B03
+        width: 100%
+        margin: 0
+        border-radius: 0
+        font-size: 20px
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+
+      .mapadress,.mapphone
+        display: flex
+        font-size: 25px
+        line-height: 40px
+        padding: 30px
+        @media screen and (max-width: 1000px)
+          font-size: 16px
+          padding: 0
+
+
+
+
+  //====== 最下方區塊
 .end-box
   position: relative
   background-color: #901317
-  +wh(100% , 400px)
+  width: 100%
 
   .end-inbox
     position: relative
     display: flex
-    +center
-    +wh(60% , 50%)
+    margin: 0 auto
+    +wh(80% , 50%)
+    @media screen and (max-width: 1070px)
+      flex-direction: column
+    @media screen and (max-width: 560px)
+      width: 100%
 
-    .end1
+
+
+    .mark-box
+      width: 60%
       display: flex
-      justify-content: center
-      align-items: center
-      +wh(20%, 100%)
+      @media screen and (max-width: 1070px)
+        width: 100%
 
-      .mark
-        background-image: url('./bgimg/mark12.png')
-        cursor: pointer
-        +wh(174px , 80px)
-        &:hover
-          opacity: 0.7
+      .end1
+        display: flex
+        justify-content: center
+        align-items: center
+        +wh(40%, 100%)
+        @media screen and (max-width: 1070px)
+          position: relative
+          margin: auto 0
 
-    .end2
-      text-align: center
-      +wh(20%, 100%)
-
-      .menu,.commodity
-        position: relative
-        font-size: 22px
-        font-weight: 100   
-        color: #D6D6D6 
-
-        p
-          margin: 10px 0 10px 0 
+        .mark
+          background-image: url('./bgimg/mark12.png')
           cursor: pointer
+          +wh(174px , 80px)
           &:hover
-            color: white
+            opacity: 0.7
+          @media screen and (max-width: 560px)
+            background-image: url('./bgimg/mark13.png')
+            +wh(100px , 100px)
+            background-repeat: round
+
+          
+
+      .end2
+        text-align: center
+        +wh(40%, 100%)
+
+        .menu,.commodity
+          position: relative
+          font-size: 22px
+          font-weight: 100   
+          color: #D6D6D6 
+
+          p
+            margin: 10px 0 10px 0 
+            cursor: pointer
+            &:hover
+              color: white
   
     .fb-box
-      +wh(40% , 147px)
+      @media screen and (max-width: 1070px)
+        position: relative
+        margin: 0 auto
 
       .fb
         position: relative
         background-image: url('./bgimg/fbimg.png')
-        left: 5%
         +wh(400px, 147px)
         *
             font-family: "微軟正黑體"
@@ -511,7 +599,9 @@
       .opword
         color: white
         text-align: center
+  //====== 最下方區塊
 
+  //====== 底部區塊
 .ShenQ
   position: relative
   background-color: black
@@ -522,5 +612,4 @@
     color: white
     padding: 3px
     font-size: 12px
-
-
+  //====== 底部區塊

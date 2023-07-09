@@ -42,21 +42,30 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
 
 //-----------商品輪播
 var swiper = new Swiper(".mySwiper11", {
-  loop: true,
-  spaceBetween: 0,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".mySwiper12", {
-  loop: true,
-  spaceBetween: 0,
-  navigation: {
-    nextEl: ".swiper-button-next11",
-    prevEl: ".swiper-button-prev11",
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
   },
-  thumbs: {
-    swiper: swiper,
+  pagination: {
+    el: ".swiper-pagination",
   },
 });
 //-----------商品輪播
+
+//-----------商品下拉
+$('.commodity-box .commodity').on('click',function(){
+  $(this).next().slideToggle();
+  // console.log($(this).next())
+})
+//-----------商品下拉
+
+$('.t.tback').on('click',function(){
+  $('html,body').animate({scrollTop:0}, 100);
+})
