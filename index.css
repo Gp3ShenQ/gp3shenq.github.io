@@ -716,7 +716,8 @@
 .end-box .end-inbox .fb-box .fb {
   position: relative;
   background-image: url("./bgimg/fbimg.png");
-  width: 400px;
+  width: 100%;
+  width: 375px;
   height: 147px;
 }
 .end-box .end-inbox .fb-box .fb * {
@@ -727,7 +728,7 @@
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f4f4f4), to(#000000));
   background-image: linear-gradient(to top, #f4f4f4, #000000);
   opacity: 0.5;
-  width: 400px;
+  width: 375px;
   height: 147px;
 }
 .end-box .end-inbox .fb-box .fb .fb-top {
