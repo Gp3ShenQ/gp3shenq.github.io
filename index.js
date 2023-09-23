@@ -1,71 +1,55 @@
+AOS.init();
 
+$(".aboutMe").on('mouseover',function(){
+  $(this).find('p').text("關於我")
+})
+$(".aboutMe").on('mouseleave',function(){
+  $(this).find('p').text("AboutMe")
+})
 
-$(".line").on('click', function(){
-  if($('.leftbar-box').hasClass('change')) {
-    $('.leftbar-box').removeClass('change')
-    return;
+$(".naveWork").on('mouseover',function(){
+  $(this).find('p').text("工作經歷")
+})
+$(".naveWork").on('mouseleave',function(){
+  $(this).find('p').text("Experience")
+})
+
+$(".navePoj").on('mouseover',function(){
+  $(this).find('p').text("作品")
+})
+$(".navePoj").on('mouseleave',function(){
+  $(this).find('p').text("Project")
+})
+
+$(".naveProfessional").on('mouseover',function(){
+  $(this).find('p').text("職業技能")
+})
+$(".naveProfessional").on('mouseleave',function(){
+  $(this).find('p').text("Professional")
+})
+
+$(window).on('scroll',function(){
+  const top = $(window).scrollTop()
+  if(top == 0){
+    $(".naveBgc").css("top","-70px")
+  }else{
+    $(".naveBgc").css("top","0")
   }
-    $('.leftbar-box').addClass('change')
-    $('.leftbar-shadow').addClass('change')
-})
-    
-$(window).on('resize',function() {
-  if (window.innerWidth>1200) $('.leftbar-box').removeClass('change')
 })
 
-$('.leftbar-shadow').on('click',function(){
-  $('.leftbar-shadow').removeClass('change')
-  $('.leftbar-box').removeClass('change')
-})
-
-//-----------首頁輪播
-const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");
-    var swiper = new Swiper(".mySwiper", {
-      // spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-      },
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-    });
-//-----------首頁輪播
-
-//-----------商品輪播
-var swiper = new Swiper(".mySwiper11", {
+var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
-    rotate: 50,
+    rotate: 30,
     stretch: 0,
-    depth: 100,
+    depth: 500,
     modifier: 1,
     slideShadows: true,
   },
-  pagination: {
-    el: ".swiper-pagination",
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  // },
 });
-//-----------商品輪播
-
-//-----------商品下拉
-$('.commodity-box .commodity').on('click',function(){
-  $(this).next().slideToggle();
-  // console.log($(this).next())
-})
-//-----------商品下拉
-
-$('.t.tback').on('click',function(){
-  $('html,body').animate({scrollTop:0}, 100);
-})

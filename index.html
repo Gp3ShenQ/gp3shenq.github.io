@@ -3,291 +3,165 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&amp;family=Jost:ital,wght@0,200;0,700;1,300;1,500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./iconmoon/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script defer src="./index.js"> </script>
-    <title>豐味堂</title>
-    <link rel="shortcut icon" href="./bgimg/favicon.png">
+    <title>ShenResume</title>
+    <link rel="shortcut icon" href="./img/Mark/16Mark.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
-  <body> 
-    <div class="indeximg"></div>
-    <div class="tbar"> 
-      <div class="wtbar">
-        <p>豐味堂</p>
-      </div>
-      <div class="back">
-        <div class="t icon"> 
-          <div class="icon-home"></div>
-        </div>
-        <div class="t tback">
-          <p>回首頁 </p>
+  <body>
+    <nav class="naveBar">
+      <div class="naveBgc"></div>
+      <div class="naveMark">
+        <div class="mark"><img src="./img/Mark/50Mark.png" alt=""></div>
+        <div class="name"> 
+          <p>Shih-Lin Shen</p>
         </div>
       </div>
-    </div>
-    <div class="fltbar"> 
-      <div class="flpic"> </div>
-      <div class="flword">
-        <div class="w fl1">
-          <p>餅的故事</p>
+      <div class="introduce">
+        <div class="word aboutMe"> 
+          <p>AboutMe </p>
         </div>
-        <div class="w fl2"> 
-          <p>所有商品</p>
+        <div class="word naveWork">
+          <p>Experience</p>
         </div>
-        <div class="w fl3"> 
-          <p>門市據點</p>
+        <div class="word navePoj"> 
+          <p>Project</p>
         </div>
-        <div class="w fl4"> 
-          <p>常見問題</p>
-        </div>
-        <div class="w fl5"> 
-          <p>聯絡我們</p>
+        <div class="word naveProfessional">
+          <p>Professional</p>
         </div>
       </div>
-      <div class="line"> 
-        <div class="li line1"> </div>
-        <div class="li line2"> </div>
-        <div class="li line3"> </div>
+    </nav>
+    <main class="resume"> 
+      <div class="bgImg"> 
+        <div class="mask"></div>
       </div>
-    </div>
-    <div class="leftbar-shadow"></div>
-    <div class="leftbar-box"> 
-      <div class="leftbar-img"> <img src="./bgimg/leftbarimg.png" alt=""></div>
-      <div class="leftbar-word">
-        <div class="l bar1"> 
-          <p>餅的故事</p>
-        </div>
-        <div class="l bar2"> 
-          <p>所有商品</p>
-        </div>
-        <div class="l bar3"> 
-          <p>門市據點</p>
-        </div>
-        <div class="l bar4"> 
-          <p>常見問題</p>
-        </div>
-        <div class="l bar5"> 
-          <p>聯絡我們</p>
-        </div>
-      </div>
-    </div>
-    <div class="midImg-box"> 
-      <div class="boxImg">
-        <div class="midBox"> 
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"> <img src="./bgimg/pic10.jpg" alt=""></div>
-              <div class="swiper-slide"> <img src="./bgimg/pic11.jpg" alt=""></div>
-              <div class="swiper-slide"> <img src="./bgimg/pic12.jpg" alt=""></div>
-              <div class="swiper-slide"> <img src="./bgimg/pic13.jpg" alt=""></div>
-              <div class="swiper-slide"> <img src="./bgimg/pic14.jpg" alt=""></div>
+      <div class="aboutBox"> 
+        <div class="aboutCenter">
+          <div class="aboutRight"> <img src="./img/pic/pic.jpg" alt=""></div>
+          <div class="aboutLeft">
+            <div class="name" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100">
+              <div class="icon-user-tie"></div>
+              <h1>姓名:</h1>
+              <h2>沈仕霖 (Shih-Lin Shen)</h2>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="story-box"> 
-      <div class="box-shadow"> </div>
-      <div class="story-img-box">
-        <div class="b box1"><img src="./bgimg/commodity1.jpg" alt=""></div>
-        <div class="b box2"><img src="./bgimg/commodity2.jpg" alt=""></div>
-      </div>
-      <div class="story-word-box"> 
-        <div class="wordbox">
-          <div class="word">
-            <p>&nbsp;&nbsp;太陽餅在台中地區的製作和銷售可以追溯到早期的台灣日治時期（1895年-1945年）。在當時，台灣的糕餅業開始蓬勃發展，太陽餅作為其中的一種特色糕點逐漸受到歡迎。</p><br>
-            <p>&nbsp;&nbsp;許多傳統糕餅店在台中地區開始製作太陽餅，並且將其作為招牌產品之一。這些店家通常以家族經營為主，世代相傳，各自保持著獨特的製作方法和口味。因此，可以說台中太陽餅的起源是多元而多樣的。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="commodity-box">
-      <div class="commoditybtn-inbox">
-        <div class="commodity-cbox">
-          <div class="commodity btn1">
-            <p>太陽餅</p>
-          </div>
-          <div class="inner n1" style="display: none"> 
-            <div class="comm m1">
-              <p>蜂蜜太陽餅 10入-30入</p>
+            <div class="phone" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100">
+              <div class="icon-mobile"></div>
+              <h1>電話:</h1>
+              <h2>0963-656-380</h2>
             </div>
-            <div class="comm m2"> 
-              <p>麥芽太陽餅 10入-30入</p>
+            <div class="mail" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100">
+              <div class="icon-mail4"></div>
+              <h1>信箱 :</h1>
+              <h2>gp3g4xup6@gmail.com</h2>
             </div>
-            <div class="comm m3">
-              <p>黑糖太陽餅 20入</p>
+            <div class="internet" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100">
+              <div class="icon-IE"></div>
+              <h1>網站:</h1>
+              <h2>XXXXXXXXXXXX.XXX.XX</h2>
             </div>
-            <div class="comm m4">
-              <p>草莓太陽餅 20入</p>
-            </div>
-            <div class="comm m5">
-              <p>芋頭太陽餅 20入</p>
-            </div>
-          </div>
-          <div class="commodity btn2"> 
-            <p>檸檬餅</p>
-          </div>
-          <div class="inner n1" style="display: none"> 
-            <div class="comm m1">
-              <p>檸檬餅 6入</p>
-            </div>
-            <div class="comm m2">
-              <p>檸檬餅 12入</p>
-            </div>
-            <div class="comm m3">
-              <p>檸檬餅 18入</p>
-            </div>
-          </div>
-          <div class="commodity btn3">
-            <p>綜合、其他系列</p>
-          </div>
-          <div class="inner n1" style="display: none"> 
-            <div class="comm m1">
-              <p>公婆餅</p>
-            </div>
-            <div class="comm m2">
-              <p>香妃酥</p>
-            </div>
-            <div class="comm m3">
-              <p>鳳梨酥</p>
-            </div>
-            <div class="comm m4">
-              <p>奶油酥餅</p>
+            <div class="CV" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+              <p>簡歷</p>
+              <hr>
+              <h2>ggjrigjeirjgoqeirjg;oirejgpeoirgjrgjiji</h2>
             </div>
           </div>
         </div>
       </div>
-      <div class="commodityimg-inbox">
-        <div class="commodityimg-box">
-          <div class="commodity-change">
-            <div class="swiper11 mySwiper11">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./bgimg/comm1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./bgimg/comm2.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./bgimg/comm3.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="./bgimg/comm4.jpg" alt=""></div>
+      <div class="experience">
+        <div class="topBox" data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <div class="word-top">
+            <p>Job Experience</p>
+            <hr>
+          </div>
+          <div class="schoolTop">
+            <p>Education</p>
+            <hr>
+          </div>
+        </div>
+        <div class="workBottom" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+          <div class="workTime">
+            <div class="line100">
+              <div class="point0"></div>
+              <div class="point33"></div>
+              <div class="point66"> </div>
+              <div class="point99"></div>
+            </div>
+            <div class="workArea">
+              <div class="work1 font">
+                <h1>鏟花技師</h1>
+                <h4>宇漢機械刮花有限公司</h4>
+                <h4>精密儀器製造工及修理</h4>
+                <h4>任職時間 : 2016/3 - 2023/9</h4>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="map-box"> 
-      <div class="mapapibox"> 
-        <div class="mapapi"> 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.300759237471!2d120.67279621081525!3d24.161182778302216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d7ce5319fb1%3A0x61bd05a22683b8eb!2zNDA05Y-w5Lit5biC5YyX5Y2A5Lit5riF6Lev5LiA5q61MzUw6Jmf!5e0!3m2!1szh-TW!2stw!4v1688912301023!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"> </iframe>
-        </div>
-      </div>
-      <div class="mapwordbox"> 
-        <div class="maptitle"> 
-          <p>門市地址 :</p>
-          <div class="mapadress"> 
-            <div class="iconnn adress"> 
-              <div class="icon-location2"></div>
-            </div>
-            <div class="adressword">
-              <p>台中市北區中清路一段350號</p>
-            </div>
-          </div>
-          <div class="mapphone"> 
-            <div class="iconnn phone">
-              <div class="icon-phone-hang-up"></div>
-            </div>
-            <div class="phoneword">
-              <p>(04)2201-4280</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="end-box"> 
-      <div class="end-inbox"> 
-        <div class="mark-box">
-          <div class="end1">
-            <div class="mark"></div>
-          </div>
-          <div class="end2">
-            <div class="menu">
-              <div class="m1"> 
-                <p>所有商品</p>
+              <div class="work1 font">
+                <h1>主廚</h1>
+                <h4>創業-拉麵店(義番町)</h4>
+                <h4>主廚／店員／餐點規劃與設計/採買</h4>
+                <h4>任職時間 : 2014/5 - 2016/1</h4>
               </div>
-              <div class="m2">
-                <p>門市據點</p>
+              <div class="work1 font">
+                <h1>值班襄理</h1>
+                <h4>十二鍋</h4>
+                <h4>內區餐點製作/外區顧客服務</h4>
+                <h4>任職時間 : 2011/10 - 2013/3</h4>
               </div>
-              <div class="m3">
-                <p>常見問題</p>
-              </div>
-              <div class="m4">
-                <p>聯絡我們</p>
+              <div class="work1 font">
+                <h1>儲備幹部</h1>
+                <h4>Battis意式風味小館</h4>
+                <h4>餐廚助手／飲品調配</h4>
+                <h4>任職時間 : 2006/3 - 2010/10</h4>
               </div>
             </div>
           </div>
-          <div class="end2">
-            <div class="commodity"> 
-              <div class="c1"> 
-                <p>太陽餅</p>
+          <div class="schoolBox" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+            <div class="line200">
+              <div class="point01"></div>
+              <div class="point100"></div>
+            </div>
+            <div class="schoolArea">
+              <div class="school font">
+                <h1>嶺東科技大學</h1>
+                <h4>行銷與流通業管理 / 二技畢業</h4>
+                <h4>就讀時間 : 2008/9 - 2011/6</h4>
               </div>
-              <div class="c2"> 
-                <p>檸檬餅</p>
-              </div>
-              <div class="c3"> 
-                <p>綜合系列</p>
+              <div class="school font">
+                <h1>嶺東科技大學</h1>
+                <h4>資訊管理學系 / 五專畢業</h4>
+                <h4>就讀時間 : 2003/9 - 2008/6</h4>
               </div>
             </div>
           </div>
         </div>
-        <div class="fb-box"> 
-          <div class="fb">
-            <div class="fb-shadow"></div>
-            <div class="fb-top"> 
-              <div class="fbimg"> </div>
-              <div class="fbword">
-                <div class="fbtitle"> 
-                  <p>豐味堂</p>
-                </div>
-                <div class="fbfans"> 
-                  <p>2,014,280位追蹤者</p>
-                </div>
+      </div>
+      <div class="projectBox">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/poj/poj1.png" alt="">
+              <div class="swiperWord1">
+                <p>室內設計網頁</p><a href="https://gp3shenq.github.io/ShenQHouse/">前往頁面</a>
               </div>
             </div>
-            <div class="fb-bottom"> 
-              <div class="fb-bbox">
-                <div class="flicon"> 
-                  <div class="icon-facebook21"></div>
-                </div>
-                <div class="fb-flword"> 
-                  <p>追蹤粉絲專頁</p>
-                </div>
-              </div>
-              <div class="fb-sbox"> 
-                <div class="sicon"> 
-                  <div class="icon-redo2"></div>
-                </div>
-                <div class="fb-sword">
-                  <p>分享</p>
-                </div>
-              </div>
+            <div class="swiper-slide"><img src="./img/poj/poj2.png" alt="">
+              <div class="swiperWord1"></div>
             </div>
-          </div>
-          <div class="opentime"> 
-            <div class="opword"> 
-              <p>| 營業時間：上午8:30 – 下午8:30 |</p>
+            <div class="swiper-slide"><img src="./img/poj/poj3.png" alt="">
+              <div class="swiperWord1"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="ShenQ"> 
-      <div class="ShenQ-word">    
-        <p>◎ ShenQ - 設計維護               </p>
-      </div>
-    </div>
+    </main>
   </body>
 </html>

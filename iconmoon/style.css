@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?r9kie2');
-  src:  url('fonts/icomoon.eot?r9kie2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?r9kie2') format('truetype'),
-    url('fonts/icomoon.woff?r9kie2') format('woff'),
-    url('fonts/icomoon.svg?r9kie2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?63hrb2');
+  src:  url('fonts/icomoon.eot?63hrb2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?63hrb2') format('truetype'),
+    url('fonts/icomoon.woff?63hrb2') format('woff'),
+    url('fonts/icomoon.svg?63hrb2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,21 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home:before {
-  content: "\e900";
+.icon-mobile:before {
+  content: "\e958";
 }
-.icon-phone-hang-up:before {
-  content: "\e943";
+.icon-user-tie:before {
+  content: "\e976";
 }
-.icon-location2:before {
-  content: "\e948";
-}
-.icon-redo2:before {
-  content: "\e968";
-}
-.icon-cross:before {
-  content: "\ea0f";
+.icon-mail4:before {
+  content: "\ea86";
 }
 .icon-facebook21:before {
   content: "\ea93";
+}
+.icon-IE:before {
+  content: "\eadb";
 }
