@@ -32,8 +32,12 @@ $(window).on('scroll',function(){
   const top = $(window).scrollTop()
   if(top == 0){
     $(".naveBgc").css("top","-70px")
+    $(".name").css("color","white")
+    $(".word").css("color","white")
   }else{
     $(".naveBgc").css("top","0")
+    $(".name").css("color","black")
+    $(".word").css("color","black")
   }
 })
 
