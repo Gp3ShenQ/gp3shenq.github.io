@@ -5,7 +5,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,200;0,700;1,300;1,500&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,200;0,700;1,300;1,500&family=Mooli&family=Young+Serif&display=swap" rel="stylesheet")
         link(rel="stylesheet", href="./index.css")
         link(rel="stylesheet", href="./iconmoon/style.css")
         link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
@@ -27,7 +27,7 @@ html(lang="en")
                 .name 
                     p Shih-Lin Shen
             .introduce
-                .word.aboutMe 
+                .word.aboutMe
                     p AboutMe 
                 .word.naveWork
                     p Experience
@@ -35,7 +35,25 @@ html(lang="en")
                     p Project
                 .word.naveProfessional
                     p Professional
+
         main.resume 
+            .rightBar 
+                .right-about 
+                    .wor.right1
+                        p About Me
+                    .point.right1-1
+                .right-experience
+                    .wor.right2
+                        p Experience
+                    .point.right1-2
+                .right-project 
+                    .wor.right3
+                        p Project 
+                    .point.right1-3
+                .right-professional 
+                    .wor.right4
+                        p Professional 
+                    .point.right1-4
             .bgImg 
                 .mask
             .aboutBox 
@@ -116,6 +134,9 @@ html(lang="en")
                                 h4 就讀時間 : 2003/9 - 2008/6
 
             .projectBox
+                .project-title(data-aos="fade-up" data-aos-anchor-placement="top-center").enfont
+                    p Project
+                    hr
                 .swiper.mySwiper
                     .swiper-wrapper
                         .swiper-slide
@@ -134,4 +155,15 @@ html(lang="en")
                                 p 家貓紀錄網頁
                                 a(href="https://gp3shenq.github.io/UmaCat/") 前往頁面
 
-            .expertise
+        .ProfessionalBox
+            .Professional-title(data-aos="fade-up" data-aos-anchor-placement="top-center")
+                p Professional 
+                hr  
+            .professionalBox
+                .pro-title
+                    p Web Development
+                .pro-inner.font3
+                    li Html5 ｜ CSS3 ｜ JavaScript
+                    li Sass ｜ Pug ｜ jQuery
+                    li RWD響應式網頁
+                    li Vue.js

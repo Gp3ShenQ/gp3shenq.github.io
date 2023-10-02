@@ -30,10 +30,25 @@ $(".naveProfessional").on('mouseleave',function(){
 
 $(window).on('scroll',function(){
   const top = $(window).scrollTop()
+  console.log(top)
   if(top == 0){
     $(".naveBgc").css("top","-70px")
     $(".name").css("color","white")
     $(".word").css("color","white")
+  }else if(top >= 100 && top <= 499){
+    $(".right1,.right2,.right3,.right4").css("right" , "-110px")
+  }else if(top >= 500 && top <= 1249){
+    $(".right1").css("right" , "-15px")
+    $(".right2,.right3,.right4").css("right" , "-110px")
+  }else if(top >= 1250 && top <= 2177){
+    $(".right2").css("right" , "-11px")
+    $(".right1,.right3,.right4").css("right" , "-110px")
+  }else if(top >= 2178 && top <= 2877){
+    $(".right3").css("right" , "-28px")
+    $(".right1,.right2,.right4").css("right" , "-110px")
+  }else if(top >= 2876 && top <= 3000){
+    $(".right1,.right2,.right3 ").css("right" , "-110px")
+    $(".right4").css("right" , "-2px")
   }else{
     $(".naveBgc").css("top","0")
     $(".name").css("color","black")
@@ -57,3 +72,4 @@ var swiper = new Swiper(".mySwiper", {
   //   el: ".swiper-pagination",
   // },
 });
+
