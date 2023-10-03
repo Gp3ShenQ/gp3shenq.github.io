@@ -50,8 +50,8 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background-color: #D7D3D2;
 }
 
@@ -124,8 +124,8 @@ html, body {
 .introduce .word {
   margin: 0 20px 0 20px;
   cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 @media screen and (max-width: 1024px) {
   .introduce .word {
@@ -133,7 +133,7 @@ html, body {
   }
 }
 .introduce .word:hover {
-  color: #666467;
+  color: #9f60bf;
 }
 @media screen and (max-width: 375px) {
   .introduce .word {
@@ -566,7 +566,7 @@ html, body {
 .resume .swiper {
   width: 100%;
   height: 650px;
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 @media screen and (max-width: 576px) {

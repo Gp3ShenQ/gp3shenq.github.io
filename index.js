@@ -1,32 +1,46 @@
 AOS.init();
 
-$(".aboutMe").on('mouseover',function(){
-  $(this).find('p').text("關於我")
+// $(".aboutMe").on('mouseover',function(){
+//   $(this).find('p').text("關於我")
+// })
+// $(".aboutMe").on('mouseleave',function(){
+//   $(this).find('p').text("AboutMe")
+// })
+
+// $(".naveWork").on('mouseover',function(){
+//   $(this).find('p').text("工作經歷")
+// })
+// $(".naveWork").on('mouseleave',function(){
+//   $(this).find('p').text("Experience")
+// })
+
+// $(".navePoj").on('mouseover',function(){
+//   $(this).find('p').text("作品")
+// })
+// $(".navePoj").on('mouseleave',function(){
+//   $(this).find('p').text("Project")
+// })
+
+// $(".naveProfessional").on('mouseover',function(){
+//   $(this).find('p').text("職業技能")
+// })
+// $(".naveProfessional").on('mouseleave',function(){
+//   $(this).find('p').text("Professional")
+// })
+
+$(".aboutMe").on("click",function(){
+  $('html,body').animate({scrollTop:750}, 100)
 })
-$(".aboutMe").on('mouseleave',function(){
-  $(this).find('p').text("AboutMe")
+$(".naveWork").on("click",function(){
+  $('html,body').animate({scrollTop:1620}, 100)
+})
+$(".navePoj").on("click",function(){
+  $('html,body').animate({scrollTop:2450}, 100)
+})
+$(".naveProfessional").on("click",function(){
+  $('html,body').animate({scrollTop:3200}, 100)
 })
 
-$(".naveWork").on('mouseover',function(){
-  $(this).find('p').text("工作經歷")
-})
-$(".naveWork").on('mouseleave',function(){
-  $(this).find('p').text("Experience")
-})
-
-$(".navePoj").on('mouseover',function(){
-  $(this).find('p').text("作品")
-})
-$(".navePoj").on('mouseleave',function(){
-  $(this).find('p').text("Project")
-})
-
-$(".naveProfessional").on('mouseover',function(){
-  $(this).find('p').text("職業技能")
-})
-$(".naveProfessional").on('mouseleave',function(){
-  $(this).find('p').text("Professional")
-})
 
 $(window).on('scroll',function(){
   const top = $(window).scrollTop()
