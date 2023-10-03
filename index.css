@@ -135,6 +135,11 @@ html, body {
 .introduce .word:hover {
   color: #666467;
 }
+@media screen and (max-width: 375px) {
+  .introduce .word {
+    margin: 0 10px 0 2px;
+  }
+}
 
 .resume {
   width: 100%;
@@ -149,6 +154,11 @@ html, body {
   line-height: 40px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+  .resume .rightBar {
+    display: none;
+  }
 }
 .resume .rightBar .right-about, .resume .rightBar .right-experience, .resume .rightBar .right-project, .resume .rightBar .right-professional {
   display: -webkit-box;
@@ -204,32 +214,82 @@ html, body {
   border-radius: 30px;
   background-color: #dbd0c2;
 }
-.resume .aboutBox .aboutCenter .aboutRight {
+@media screen and (max-width: 768px) {
+  .resume .aboutBox .aboutCenter {
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+  }
+}
+.resume .aboutBox .aboutCenter .aboutLeft {
   position: relative;
   width: 50%;
   height: 100%;
 }
-.resume .aboutBox .aboutCenter .aboutRight img {
+@media screen and (max-width: 768px) {
+  .resume .aboutBox .aboutCenter .aboutLeft {
+    width: 45%;
+    height: 50%;
+  }
+}
+.resume .aboutBox .aboutCenter .aboutLeft img {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.resume .aboutBox .aboutCenter .aboutLeft {
-  width: 50%;
+@media screen and (max-width: 1024px) {
+  .resume .aboutBox .aboutCenter .aboutLeft img {
+    width: 90%;
+  }
 }
-.resume .aboutBox .aboutCenter .aboutLeft h1 {
+.resume .aboutBox .aboutCenter .aboutRight {
+  width: 50%;
+  word-wrap: break-word;
+}
+.resume .aboutBox .aboutCenter .aboutRight h1 {
   margin-left: 10px;
 }
-.resume .aboutBox .aboutCenter .aboutLeft h2 {
+@media screen and (max-width: 1024px) {
+  .resume .aboutBox .aboutCenter .aboutRight h1 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resume .aboutBox .aboutCenter .aboutRight h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight h1 {
+    font-size: 18px;
+  }
+}
+.resume .aboutBox .aboutCenter .aboutRight h2 {
   margin-left: 20px;
 }
-.resume .aboutBox .aboutCenter .aboutLeft a {
+@media screen and (max-width: 1024px) {
+  .resume .aboutBox .aboutCenter .aboutRight h2 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight h2 {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+}
+.resume .aboutBox .aboutCenter .aboutRight a {
   font-size: 22px;
   margin-left: 20px;
 }
-.resume .aboutBox .aboutCenter .aboutLeft .name, .resume .aboutBox .aboutCenter .aboutLeft .phone, .resume .aboutBox .aboutCenter .aboutLeft .mail, .resume .aboutBox .aboutCenter .aboutLeft .internet {
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight .icon-user-tie, .resume .aboutBox .aboutCenter .aboutRight .icon-mail4, .resume .aboutBox .aboutCenter .aboutRight .icon-IE, .resume .aboutBox .aboutCenter .aboutRight .icon-mobile {
+    display: none;
+  }
+}
+.resume .aboutBox .aboutCenter .aboutRight .name, .resume .aboutBox .aboutCenter .aboutRight .phone, .resume .aboutBox .aboutCenter .aboutRight .mail, .resume .aboutBox .aboutCenter .aboutRight .internet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,19 +299,45 @@ html, body {
           align-items: center;
   margin-top: 20px;
 }
-.resume .aboutBox .aboutCenter .aboutLeft .name {
+.resume .aboutBox .aboutCenter .aboutRight .name {
   margin-top: 120px;
 }
-.resume .aboutBox .aboutCenter .aboutLeft .CV {
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight .internet {
+    display: block;
+  }
+  .resume .aboutBox .aboutCenter .aboutRight .internet h1 {
+    position: absolute;
+  }
+  .resume .aboutBox .aboutCenter .aboutRight .internet a {
+    position: absolute;
+    top: 31%;
+    left: 39%;
+    word-wrap: break-word;
+  }
+}
+.resume .aboutBox .aboutCenter .aboutRight .CV {
   margin-top: 30px;
 }
-.resume .aboutBox .aboutCenter .aboutLeft .CV p {
+.resume .aboutBox .aboutCenter .aboutRight .CV p {
   font-size: 40px;
   font-weight: 700;
 }
-.resume .aboutBox .aboutCenter .aboutLeft .CV hr {
+.resume .aboutBox .aboutCenter .aboutRight .CV hr {
   width: 80%;
   border: solid 2px #8a837a;
+}
+@media screen and (max-width: 768px) {
+  .resume .aboutBox .aboutCenter .aboutRight .CV {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight .CV {
+    display: block;
+  }
 }
 .resume .experience {
   position: relative;
@@ -269,6 +355,17 @@ html, body {
   width: 50%;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .resume .experience .word-top {
+    padding: 50px 0 0 50px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .word-top {
+    padding: 50px 0 0 10px;
+  }
+}
 .resume .experience hr {
   margin-top: 20px;
   width: 80%;
@@ -283,6 +380,17 @@ html, body {
   width: 50%;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .resume .experience .schoolTop {
+    padding: 50px 0 0 50px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolTop {
+    padding: 50px 0 0 10px;
+  }
+}
 .resume .experience .workBottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,12 +403,27 @@ html, body {
   margin-left: 15%;
   width: 50%;
 }
+@media screen and (max-width: 1024px) {
+  .resume .experience .workTime {
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .workTime {
+    margin-left: 0;
+  }
+}
 .resume .experience .workTime .line100 {
   position: relative;
   display: inline-block;
   height: 500px;
   margin: 70px 0 0 0;
   border: solid 2px #E3C9C8;
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .workTime .line100 {
+    display: none;
+  }
 }
 .resume .experience .workTime .point0, .resume .experience .workTime .point33, .resume .experience .workTime .point66, .resume .experience .workTime .point99 {
   position: absolute;
@@ -322,6 +445,11 @@ html, body {
 .resume .experience .workArea, .resume .experience .schoolArea {
   margin: 15px 0 0 30px;
 }
+@media screen and (max-width: 576px) {
+  .resume .experience .workArea, .resume .experience .schoolArea {
+    margin: 15px 0 0 10px;
+  }
+}
 .resume .experience .workArea .work1, .resume .experience .schoolArea .work1 {
   margin-top: 20px;
   border-radius: 20px;
@@ -331,6 +459,19 @@ html, body {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+@media screen and (max-width: 768px) {
+  .resume .experience .workArea .work1 h1, .resume .experience .schoolArea .work1 h1 {
+    font-size: 22px;
+  }
+  .resume .experience .workArea .work1 h4, .resume .experience .schoolArea .work1 h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .workArea .work1 h1, .resume .experience .schoolArea .work1 h1 {
+    font-size: 18px;
+  }
+}
 .resume .experience .schoolBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,12 +479,22 @@ html, body {
   margin-left: 5%;
   width: 50%;
 }
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox {
+    margin-left: 0;
+  }
+}
 .resume .experience .schoolBox .line200 {
   position: relative;
   display: inline-block;
   height: 150px;
   margin: 70px 0 0 0;
   border: solid 2px #E3C9C8;
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox .line200 {
+    display: none;
+  }
 }
 .resume .experience .schoolBox .point01, .resume .experience .schoolBox .point100 {
   position: absolute;
@@ -365,6 +516,19 @@ html, body {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+@media screen and (max-width: 768px) {
+  .resume .experience .schoolBox .school h1 {
+    font-size: 22px;
+  }
+  .resume .experience .schoolBox .school h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox .school h1 {
+    font-size: 18px;
+  }
+}
 .resume .projectBox {
   position: relative;
   height: 70%;
@@ -381,6 +545,17 @@ html, body {
   width: 50%;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .resume .project-title {
+    padding: 50px 0 0 50px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .project-title {
+    padding: 50px 0 0 10px;
+  }
+}
 .resume hr {
   margin-top: 20px;
   width: 80%;
@@ -394,11 +569,28 @@ html, body {
   padding-top: 80px;
   padding-bottom: 50px;
 }
+@media screen and (max-width: 576px) {
+  .resume .swiper {
+    height: 550px;
+  }
+}
 .resume .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 500px;
   height: 400px;
+}
+@media screen and (max-width: 576px) {
+  .resume .swiper-slide {
+    width: 350px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .resume .swiper-slide {
+    width: 250px;
+    height: 150px;
+  }
 }
 .resume .swiper-slide img {
   position: relative;
@@ -418,6 +610,16 @@ html, body {
   border: solid 1px;
   -webkit-box-shadow: 0px 4px 10px 5px;
           box-shadow: 0px 4px 10px 5px;
+}
+@media screen and (max-width: 576px) {
+  .resume .swiper-slide .swiperWord1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .resume .swiper-slide .swiperWord1 {
+    font-size: 18px;
+  }
 }
 .resume .swiper-slide p {
   color: white;
@@ -447,6 +649,17 @@ html, body {
   width: 50%;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .ProfessionalBox .Professional-title {
+    padding: 50px 0 0 50px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .Professional-title {
+    padding: 50px 0 0 10px;
+  }
+}
 .ProfessionalBox hr {
   margin-top: 20px;
   width: 80%;
@@ -459,11 +672,31 @@ html, body {
   padding: 50px 0 0 100px;
   color: #fff;
 }
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .professionalBox {
+    padding: 50px 0 0 50px;
+  }
+}
 .ProfessionalBox .professionalBox .pro-title {
   font-size: 50px;
   font-weight: 700;
 }
+@media screen and (max-width: 768px) {
+  .ProfessionalBox .professionalBox .pro-title {
+    font-size: 34px;
+  }
+}
 .ProfessionalBox .professionalBox .pro-inner {
   font-size: 30px;
   margin: 30px 0 0 50px;
+}
+@media screen and (max-width: 768px) {
+  .ProfessionalBox .professionalBox .pro-inner {
+    margin: 30px 0 0 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .professionalBox .pro-inner {
+    font-size: 18px;
+  }
 }

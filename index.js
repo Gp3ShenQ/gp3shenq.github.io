@@ -30,7 +30,7 @@ $(".naveProfessional").on('mouseleave',function(){
 
 $(window).on('scroll',function(){
   const top = $(window).scrollTop()
-  console.log(top)
+  // console.log(top)
   if(top == 0){
     $(".naveBgc").css("top","-70px")
     $(".name").css("color","white")

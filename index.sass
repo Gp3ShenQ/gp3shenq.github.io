@@ -90,6 +90,8 @@ html,body
       margin: 0 10px 0 10px
     &:hover
       color: #666467
+    @media screen and (max-width: 375px)
+      margin: 0 10px 0 2px
 
 
 
@@ -104,6 +106,8 @@ html,body
     right: 5px
     line-height: 40px
     transform: translateY(-50%)
+    @media screen and (max-width: 768px)
+      display: none
     .right-about,.right-experience,.right-project,.right-professional
       display: flex
       position: relative
@@ -149,24 +153,49 @@ html,body
       left: 10% 
       border-radius: 30px
       background-color: #dbd0c2
-      .aboutRight
+      @media screen and (max-width: 768px)
+        width: 100%
+        left: 0
+        border-radius: 0
+      .aboutLeft
         position: relative
         width: 50%
         height: 100%
+        @media screen and (max-width: 768px)
+          width: 45%
+          height: 50%
         img
           position: absolute
           top: 50%
           left: 50%
           transform: translate(-50% , -50%)
-      .aboutLeft
+          @media screen and (max-width: 1024px)
+            width: 90%
+
+      .aboutRight
         width: 50%
+        word-wrap: break-word
         h1
           margin-left: 10px
+          @media screen and (max-width: 1024px)
+            font-size: 26px
+          @media screen and (max-width: 768px)
+            font-size: 20px
+          @media screen and (max-width: 576px)
+            font-size: 18px
         h2
           margin-left: 20px
+          @media screen and (max-width: 1024px)
+            font-size: 18px
+          @media screen and (max-width: 576px)
+            font-size: 14px
+            margin-left: 0px
         a
           font-size: 22px
           margin-left: 20px
+        @media screen and (max-width: 576px)
+          .icon-user-tie,.icon-mail4,.icon-IE,.icon-mobile
+            display: none
 
         .name,.phone,.mail,.internet
           display: flex
@@ -175,6 +204,16 @@ html,body
           margin-top: 20px
         .name
           margin-top: 120px
+        .internet 
+          @media screen and (max-width: 576px)
+            display: block
+            h1
+              position: absolute
+            a
+              position: absolute
+              top: 31%
+              left: 39%
+              word-wrap: break-word
         .CV
           margin-top: 30px
           p
@@ -183,6 +222,12 @@ html,body
           hr
             width: 80%
             border: solid 2px #8a837a
+          @media screen and (max-width: 768px)
+            position: absolute
+            top: 45%  
+            left: 10% 
+          @media screen and (max-width: 576px)
+            display: block
       
   .experience
     position: relative
@@ -195,6 +240,11 @@ html,body
       padding: 50px 0 0 100px
       width: 50%
       color: #fff
+      @media screen and (max-width: 768px)
+        padding: 50px 0 0 50px
+        font-size: 28px
+      @media screen and (max-width: 576px)
+        padding: 50px 0 0 10px
     hr
       margin-top: 20px
       width: 80%
@@ -206,18 +256,31 @@ html,body
       padding: 50px 0 0 50px
       width: 50%
       color: #fff
+      @media screen and (max-width: 768px)
+        padding: 50px 0 0 50px
+        font-size: 28px 
+      @media screen and (max-width: 576px)
+        padding: 50px 0 0 10px
     .workBottom
       display: flex
     .workTime
       display: flex
       margin-left: 15%  
       width: 50%
+      @media screen and (max-width: 1024px)
+        margin-left: 10%
+      @media screen and (max-width: 576px)
+        margin-left: 0
+      
+      
       .line100
         position: relative
         display: inline-block
         height: 500px
         margin: 70px 0 0 0
         border: solid 2px #E3C9C8
+        @media screen and (max-width: 576px)
+          display: none
       .point0,.point33,.point66,.point99
         position: absolute
         width: 10px
@@ -233,22 +296,36 @@ html,body
         top: 100%
     .workArea,.schoolArea
       margin: 15px 0 0 30px
+      @media screen and (max-width: 576px)
+        margin: 15px 0 0 10px
       .work1
         margin-top: 20px
         border-radius: 20px
         padding: 10px
         box-shadow: -3px 3px 10px 1px
         backdrop-filter: blur(10px)
+        @media screen and (max-width: 768px)
+          h1
+            font-size: 22px
+          h4
+            font-size: 14px
+        @media screen and (max-width: 576px)
+          h1
+            font-size: 18px
     .schoolBox
       display: flex
       margin-left: 5%  
       width: 50%
+      @media screen and (max-width: 576px)
+        margin-left: 0
       .line200
         position: relative
         display: inline-block
         height: 150px
         margin: 70px 0 0 0
         border: solid 2px #E3C9C8
+        @media screen and (max-width: 576px)
+          display: none
       .point01,.point100
         position: absolute
         width: 10px
@@ -264,6 +341,14 @@ html,body
         padding: 10px
         box-shadow: 3px 3px 10px 1px
         backdrop-filter: blur(10px)
+        @media screen and (max-width: 768px)
+          h1
+            font-size: 22px
+          h4
+            font-size: 14px
+        @media screen and (max-width: 576px)
+          h1
+            font-size: 18px
 
   .projectBox
     position: relative
@@ -279,6 +364,11 @@ html,body
     padding: 50px 0 0 100px
     width: 50%
     color: #fff
+    @media screen and (max-width: 768px)
+      padding: 50px 0 0 50px
+      font-size: 28px
+    @media screen and (max-width: 576px)
+      padding: 50px 0 0 10px
   hr
     margin-top: 20px
     width: 80%
@@ -289,11 +379,20 @@ html,body
     height: 650px
     padding-top: 80px
     padding-bottom: 50px
+    @media screen and (max-width: 576px)
+      height: 550px
+
   .swiper-slide
     background-position: center
     background-size: cover
     width: 500px
     height:400px
+    @media screen and (max-width: 576px)
+      width: 350px
+      height: 250px
+    @media screen and (max-width: 375px)
+      width: 250px
+      height: 150px
 
     img
       position: relative
@@ -308,9 +407,12 @@ html,body
       color: #9698a8 
       font-size: 30px
       font-weight: 700
-      // border-radius: 0 0 30px 0px 
       border: solid 1px 
       box-shadow: 0px 4px 10px 5px
+      @media screen and (max-width: 576px)
+        font-size: 25px
+      @media screen and (max-width: 375px)
+        font-size: 18px
     p
       color: white
     a 
@@ -333,6 +435,11 @@ html,body
     padding: 200px 0 0 100px
     width: 50%
     color: #fff
+    @media screen and (max-width: 768px)
+      padding: 50px 0 0 50px
+      font-size: 28px
+    @media screen and (max-width: 576px)
+      padding: 50px 0 0 10px
   hr
     margin-top: 20px
     width: 80%
@@ -343,9 +450,17 @@ html,body
     position: relative
     padding: 50px 0 0 100px
     color: #fff
+    @media screen and (max-width: 576px)
+      padding: 50px 0 0 50px
     .pro-title
       font-size: 50px 
       font-weight: 700
+      @media screen and (max-width: 768px)
+        font-size: 34px
     .pro-inner 
       font-size: 30px
       margin: 30px 0 0 50px
+      @media screen and (max-width: 768px)
+        margin: 30px 0 0 0 
+      @media screen and (max-width: 576px)
+        font-size: 18px
