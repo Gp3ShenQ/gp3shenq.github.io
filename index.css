@@ -190,7 +190,7 @@ html, body {
   background-position: center center;
   top: 0;
   left: 0;
-  background-image: url("./img/bgImg/bgImg.jpg");
+  background-image: url("./img/bgImg/bgimg.jpg");
 }
 .resume .bgImg .mask {
   position: absolute;
