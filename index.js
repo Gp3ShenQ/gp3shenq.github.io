@@ -28,6 +28,15 @@ AOS.init();
 //   $(this).find('p').text("Professional")
 // })
 
+
+$(window).on('scroll',function(){
+  let opacity = $(window).scrollTop()/3500;
+  console.log(opacity)
+  $('.mask').css("opacity",`${opacity}`)
+  })
+
+
+
 $(".aboutMe").on("click",function(){
   $('html,body').animate({scrollTop:750}, 100)
 })
