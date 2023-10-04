@@ -36,7 +36,6 @@ $(window).on('scroll',function(){
   })
 
 
-
 $(".aboutMe").on("click",function(){
   $('html,body').animate({scrollTop:750}, 100)
 })
@@ -58,6 +57,7 @@ $(window).on('scroll',function(){
     $(".naveBgc").css("top","-70px")
     $(".name").css("color","white")
     $(".word").css("color","white")
+    $(".bottomArrow").css("display" , "block")
   }else if(top >= 100 && top <= 499){
     $(".right1,.right2,.right3,.right4").css("right" , "-110px")
   }else if(top >= 500 && top <= 1249){
@@ -76,6 +76,7 @@ $(window).on('scroll',function(){
     $(".naveBgc").css("top","0")
     $(".name").css("color","black")
     $(".word").css("color","black")
+    $(".bottomArrow").css("display" , "none")
   }
 })
 

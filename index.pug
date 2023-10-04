@@ -24,7 +24,7 @@ html(lang="en")
             .naveMark
                 .mark
                     img(src="./img/Mark/50Mark.png", alt="")
-                .name 
+                .name.enfont
                     p Shih-Lin Shen
             .introduce
                 .word.aboutMe
@@ -37,7 +37,7 @@ html(lang="en")
                     p Professional
 
         main.resume 
-            .rightBar 
+            .rightBar.enfont
                 .right-about 
                     .wor.right1
                         p About Me
@@ -55,6 +55,8 @@ html(lang="en")
                         p Professional 
                     .point.right1-4
             .bgImg 
+                .bottomArrow
+                    .icon-ctrl
                 .mask
             .aboutBox 
                 .aboutCenter
@@ -140,24 +142,36 @@ html(lang="en")
                                 h4 &emsp;&emsp;2003/9 - 2008/6
 
             .projectBox
-                .project-title(data-aos="fade-up" data-aos-anchor-placement="top-center").enfont
-                    p Project
+                .project-title(data-aos="fade-up" data-aos-anchor-placement="top-center")
+                    p.font2 Project
                     hr
                 .swiper.mySwiper
                     .swiper-wrapper
                         .swiper-slide
                             img(src="./img/poj/poj1.png", alt="")
                             .swiperWord1
+                                .swiperBox1
+                                    .smallImg 
+                                    .rightPojword.font2
+                                        h2 project # 1
                                 p 試做室內設計網頁
                                 a(href="https://gp3shenq.github.io/ShenQHouse/") 前往頁面
                         .swiper-slide
                             img(src="./img/poj/poj2.png", alt="")
                             .swiperWord1
+                                .swiperBox1
+                                    .smallImg 
+                                    .rightPojword
+                                        h2 project # 2
                                 p 食品網頁
                                 a(href="https://gp3shenq.github.io/sumcake/") 前往頁面
                         .swiper-slide
                             img(src="./img/poj/poj3.png", alt="")
                             .swiperWord1
+                                .swiperBox1
+                                    .smallImg 
+                                    .rightPojword
+                                        h2 project # 3
                                 p 家貓紀錄網頁
                                 a(href="https://gp3shenq.github.io/UmaCat/") 前往頁面
 
