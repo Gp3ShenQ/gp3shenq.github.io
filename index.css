@@ -6,7 +6,15 @@ html, body {
 
 * {
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cloud100 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
 }
 
 .font {
@@ -37,6 +45,8 @@ html, body {
 
 .naveBar {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
   width: 100%;
@@ -47,12 +57,15 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #D7D3D2;
 }
 
 .naveMark {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 10px 0 0 1%;
 }
@@ -66,6 +79,7 @@ html, body {
   font-weight: 700;
   cursor: pointer;
   margin-left: 20px;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 @media screen and (max-width: 768px) {
@@ -81,6 +95,8 @@ html, body {
 
 .introduce {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 30px;
   font-weight: 600;
@@ -115,6 +131,7 @@ html, body {
 .introduce .word {
   margin: 0 20px 0 20px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 @media screen and (max-width: 1024px) {
@@ -142,7 +159,8 @@ html, body {
   top: 50%;
   right: 5px;
   line-height: 40px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 @media screen and (max-width: 768px) {
   .resume .rightBar {
@@ -150,10 +168,13 @@ html, body {
   }
 }
 .resume .rightBar .right-about, .resume .rightBar .right-experience, .resume .rightBar .right-project, .resume .rightBar .right-professional {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 .resume .rightBar .right1, .resume .rightBar .right2, .resume .rightBar .right3, .resume .rightBar .right4 {
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   position: relative;
   color: white;
@@ -182,10 +203,23 @@ html, body {
   position: absolute;
   top: 95%;
   left: 50%;
-  transform: translateX(-50%) rotate(180deg);
-  animation: Arrow 3s infinite;
+  -webkit-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
+  -webkit-animation: Arrow 3s infinite;
+          animation: Arrow 3s infinite;
   font-size: 40px;
   color: #164451;
+}
+@-webkit-keyframes Arrow {
+  0% {
+    top: 93%;
+  }
+  50% {
+    top: 95%;
+  }
+  100% {
+    top: 93%;
+  }
 }
 @keyframes Arrow {
   0% {
@@ -196,6 +230,92 @@ html, body {
   }
   100% {
     top: 93%;
+  }
+}
+.resume .bgImg .cloud {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+}
+.resume .bgImg .cloud .cloud1 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  bottom: -60px;
+  left: 10px;
+  -webkit-box-shadow: 1100px -100px 200px 100px #92A9AF;
+          box-shadow: 1100px -100px 200px 100px #92A9AF;
+  -webkit-animation: move 18s infinite;
+          animation: move 18s infinite;
+}
+.resume .bgImg .cloud .cloud1 .c1-1 {
+  -webkit-box-shadow: 100px -200px 140px 100px #92A9AF;
+          box-shadow: 100px -200px 140px 100px #92A9AF;
+}
+.resume .bgImg .cloud .cloud1 .c1-2 {
+  -webkit-box-shadow: 600px -400px 170px 100px #92A9AF;
+          box-shadow: 600px -400px 170px 100px #92A9AF;
+}
+@-webkit-keyframes move {
+  0% {
+    bottom: -60px;
+    left: -1200px;
+  }
+  100% {
+    bottom: -60px;
+    left: 1700px;
+  }
+}
+@keyframes move {
+  0% {
+    bottom: -60px;
+    left: -1200px;
+  }
+  100% {
+    bottom: -60px;
+    left: 1700px;
+  }
+}
+.resume .bgImg .cloud .cloud2 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  bottom: -60px;
+  left: 10px;
+  -webkit-box-shadow: 1100px -650px 200px 100px #92A9AF;
+          box-shadow: 1100px -650px 200px 100px #92A9AF;
+  -webkit-animation: move1 11s infinite;
+          animation: move1 11s infinite;
+}
+.resume .bgImg .cloud .cloud2 .c2-1 {
+  -webkit-box-shadow: 900px -750px 140px 100px #92A9AF;
+          box-shadow: 900px -750px 140px 100px #92A9AF;
+}
+.resume .bgImg .cloud .cloud2 .c2-2 {
+  -webkit-box-shadow: 600px -700px 270px 100px #92A9AF;
+          box-shadow: 600px -700px 270px 100px #92A9AF;
+}
+@-webkit-keyframes move1 {
+  0% {
+    bottom: -60px;
+    left: 2000px;
+  }
+  100% {
+    bottom: -60px;
+    left: -1300px;
+  }
+}
+@keyframes move1 {
+  0% {
+    bottom: -60px;
+    left: 2000px;
+  }
+  100% {
+    bottom: -60px;
+    left: -1300px;
   }
 }
 .resume .bgImg .mask {
@@ -212,6 +332,8 @@ html, body {
 }
 .resume .aboutBox .aboutCenter {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100%;
@@ -239,7 +361,8 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 1024px) {
   .resume .aboutBox .aboutCenter .aboutLeft img {
@@ -292,9 +415,13 @@ html, body {
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .name, .resume .aboutBox .aboutCenter .aboutRight .phone, .resume .aboutBox .aboutCenter .aboutRight .mail, .resume .aboutBox .aboutCenter .aboutRight .internet {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
 }
 .resume .aboutBox .aboutCenter .aboutRight .name {
@@ -342,6 +469,8 @@ html, body {
   width: 100%;
 }
 .resume .experience .topBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .resume .experience .word-top {
@@ -366,7 +495,8 @@ html, body {
   margin-top: 20px;
   width: 80%;
   color: #e4c48d;
-  box-shadow: 0 0 15px 2px;
+  -webkit-box-shadow: 0 0 15px 2px;
+          box-shadow: 0 0 15px 2px;
 }
 .resume .experience .schoolTop {
   font-size: 40px;
@@ -387,9 +517,13 @@ html, body {
   }
 }
 .resume .experience .workBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .resume .experience .workTime {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 15%;
   width: 50%;
@@ -445,7 +579,8 @@ html, body {
   margin-top: 20px;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: -3px 3px 10px 1px;
+  -webkit-box-shadow: -3px 3px 10px 1px;
+          box-shadow: -3px 3px 10px 1px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -463,6 +598,8 @@ html, body {
   }
 }
 .resume .experience .schoolBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 5%;
   width: 50%;
@@ -499,7 +636,8 @@ html, body {
   margin-top: 20px;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 3px 3px 10px 1px;
+  -webkit-box-shadow: 3px 3px 10px 1px;
+          box-shadow: 3px 3px 10px 1px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -547,7 +685,8 @@ html, body {
   margin-top: 20px;
   width: 80%;
   color: #e4c48d;
-  box-shadow: 0 0 15px 2px;
+  -webkit-box-shadow: 0 0 15px 2px;
+          box-shadow: 0 0 15px 2px;
 }
 .resume .swiper {
   width: 100%;
@@ -586,6 +725,7 @@ html, body {
   height: 40%;
 }
 .resume .swiper-slide img {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
   display: block;
@@ -595,6 +735,8 @@ html, body {
 }
 .resume .swiper-slide .swiperBox1 {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 50%;
 }
@@ -636,6 +778,7 @@ html, body {
   color: #ecc7c7;
   right: 2%;
   bottom: 5%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .resume .swiper-slide .swiperWord1 a:hover {
@@ -669,7 +812,8 @@ html, body {
   margin-top: 20px;
   width: 80%;
   color: #e4c48d;
-  box-shadow: 0 0 15px 2px;
+  -webkit-box-shadow: 0 0 15px 2px;
+          box-shadow: 0 0 15px 2px;
 }
 .ProfessionalBox .professionalBox {
   position: relative;
@@ -703,4 +847,4 @@ html, body {
   .ProfessionalBox .professionalBox .pro-inner {
     font-size: 18px;
   }
-}/*# sourceMappingURL=index.css.map */
+}

@@ -60,9 +60,11 @@ $(window).on('scroll',function(){
     $(".bottomArrow").css("display" , "block")
   }else if(top >= 100 && top <= 499){
     $(".right1,.right2,.right3,.right4").css("right" , "-110px")
+    $(".cloud").css("display" , "block")
   }else if(top >= 500 && top <= 1249){
     $(".right1").css("right" , "-15px")
     $(".right2,.right3,.right4").css("right" , "-110px")
+    $(".cloud").css("display" , "none")
   }else if(top >= 1250 && top <= 2177){
     $(".right2").css("right" , "-11px")
     $(".right1,.right3,.right4").css("right" , "-110px")
