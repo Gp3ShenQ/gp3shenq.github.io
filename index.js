@@ -43,10 +43,10 @@ $(".naveWork").on("click",function(){
   $('html,body').animate({scrollTop:1620}, 100)
 })
 $(".navePoj").on("click",function(){
-  $('html,body').animate({scrollTop:2450}, 100)
+  $('html,body').animate({scrollTop:2550}, 100)
 })
 $(".naveProfessional").on("click",function(){
-  $('html,body').animate({scrollTop:3200}, 100)
+  $('html,body').animate({scrollTop:3300}, 100)
 })
 
 
