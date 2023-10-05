@@ -93,27 +93,28 @@ html,body
     @media screen and (max-width: 768px)
       margin-left: 0
     @media screen and (max-width: 576px)
-      font-size: 22px    
+      font-size: 18px    
 .introduce
   position: absolute
   display: flex
   font-size: 30px
   font-weight: 600
   margin-top: 1%
-  right: 20%
+  right: 15%
   @media screen and (max-width: 1200px)
-    right: 5%
+    right: 2%
+    font-size: 26px
   @media screen and (max-width: 1024px)
     padding-top: 15px
-    font-size: 22px
+    font-size: 18px
   @media screen and (max-width: 768px)
     right: 0.2%
     padding-top: 15px
-    font-size: 18px
+    font-size: 14px
   @media screen and (max-width: 576px)
     right: 0
-    padding: 15px 0 0 20px
-    font-size: 14px
+    padding: 5px 0 0 20px
+    font-size: 12px
   .word
     margin: 0 20px 0 20px
     cursor: pointer
@@ -122,8 +123,8 @@ html,body
       margin: 0 10px 0 10px
     &:hover
       color: #9f60bf
-    @media screen and (max-width: 375px)
-      margin: 0 10px 0 2px
+    @media screen and (max-width: 576px)
+      margin: 0 5px 0 2px
 
 
 
@@ -199,6 +200,8 @@ html,body
           box-shadow: 100px -200px 140px 100px #92A9AF
         .c1-2
           box-shadow: 600px -450px 170px 200px #92A9AF
+          @media screen and (max-width: 576px)
+            box-shadow: 600px -450px 170px 100px #92A9AF
       @keyframes move
         0%
           bottom: -60px
@@ -237,6 +240,10 @@ html,body
       // border: solid 1px black
       backface-visibility: hidden
       font-size: 50px
+      @media screen and (max-width: 576px)
+        top: 30%
+        left: 50%
+        transform: translate(-50% , 0)
     span
       display: inline-block
       text-shadow: 0 0 0 #92A9AF
@@ -245,6 +252,8 @@ html,body
       animation-fill-mode: both
       font-weight: 700
       color: #92A9AF
+      @media screen and (max-width: 576px)
+        font-size: 30px
 
         //文字被吹走效果
     @keyframes smoky  
