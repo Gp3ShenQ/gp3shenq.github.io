@@ -155,6 +155,7 @@ html, body {
 }
 .resume .rightBar {
   position: fixed;
+  display: none;
   width: 90px;
   height: 200px;
   z-index: 99;
@@ -163,6 +164,7 @@ html, body {
   line-height: 40px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .resume .rightBar {
@@ -247,24 +249,25 @@ html, body {
   border-radius: 100%;
   bottom: -60px;
   left: 10px;
+  z-index: 99;
   -webkit-box-shadow: 1100px -100px 200px 100px #92A9AF;
           box-shadow: 1100px -100px 200px 100px #92A9AF;
   -webkit-animation: move 18s infinite;
           animation: move 18s infinite;
+}
+@media screen and (max-width: 1024px) {
+  .resume .bgImg .cloud .cloud1 {
+    -webkit-animation: move 22s infinite;
+            animation: move 22s infinite;
+  }
 }
 .resume .bgImg .cloud .cloud1 .c1-1 {
   -webkit-box-shadow: 100px -200px 140px 100px #92A9AF;
           box-shadow: 100px -200px 140px 100px #92A9AF;
 }
 .resume .bgImg .cloud .cloud1 .c1-2 {
-  -webkit-box-shadow: 600px -450px 170px 200px #92A9AF;
-          box-shadow: 600px -450px 170px 200px #92A9AF;
-}
-@media screen and (max-width: 576px) {
-  .resume .bgImg .cloud .cloud1 .c1-2 {
-    -webkit-box-shadow: 600px -450px 170px 100px #92A9AF;
-            box-shadow: 600px -450px 170px 100px #92A9AF;
-  }
+  -webkit-box-shadow: 600px -350px 170px 200px #92A9AF;
+          box-shadow: 600px -350px 170px 200px #92A9AF;
 }
 @-webkit-keyframes move {
   0% {
@@ -349,19 +352,21 @@ html, body {
 }
 .resume .bgImg span {
   display: inline-block;
-  text-shadow: 0 0 0 #92A9AF;
+  text-shadow: 0 1px 10px black;
   -webkit-animation-name: smoky;
           animation-name: smoky;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: infinite;
+          animation-fill-mode: infinite;
   font-weight: 700;
   color: #92A9AF;
 }
 @media screen and (max-width: 576px) {
   .resume .bgImg span {
     font-size: 30px;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 @-webkit-keyframes smoky {
@@ -372,8 +377,7 @@ html, body {
   100% {
     -webkit-transform: translate3d(5rem, -1rem, 0) rotate(-15deg) skewX(90deg) scale(1.5);
             transform: translate3d(5rem, -1rem, 0) rotate(-15deg) skewX(90deg) scale(1.5);
-    text-shadow: 0 0 0.7em #92A9AF;
-    color: transparent;
+    text-shadow: 0 0 0.9em #92A9AF;
     opacity: 0;
   }
 }
@@ -385,68 +389,70 @@ html, body {
   100% {
     -webkit-transform: translate3d(5rem, -1rem, 0) rotate(-15deg) skewX(90deg) scale(1.5);
             transform: translate3d(5rem, -1rem, 0) rotate(-15deg) skewX(90deg) scale(1.5);
-    text-shadow: 0 0 0.7em #92A9AF;
-    color: transparent;
+    text-shadow: 0 0 0.9em #92A9AF;
     opacity: 0;
   }
 }
 .resume .bgImg span:nth-of-type(1) {
-  -webkit-animation-delay: 4.4s;
-          animation-delay: 4.4s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
 }
 .resume .bgImg span:nth-of-type(2) {
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 .resume .bgImg span:nth-of-type(3) {
-  -webkit-animation-delay: 4.6s;
-          animation-delay: 4.6s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 .resume .bgImg span:nth-of-type(4) {
-  -webkit-animation-delay: 4.7s;
-          animation-delay: 4.7s;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
 .resume .bgImg span:nth-of-type(5) {
-  -webkit-animation-delay: 4.8s;
-          animation-delay: 4.8s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 .resume .bgImg span:nth-of-type(6) {
-  -webkit-animation-delay: 4.9s;
-          animation-delay: 4.9s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 .resume .bgImg span:nth-of-type(7) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .resume .bgImg span:nth-of-type(8) {
-  -webkit-animation-delay: 5.1s;
-          animation-delay: 5.1s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 .resume .bgImg span:nth-of-type(9) {
-  -webkit-animation-delay: 5.2s;
-          animation-delay: 5.2s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
 }
 .resume .bgImg span:nth-of-type(10) {
-  -webkit-animation-delay: 5.3s;
-          animation-delay: 5.3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 .resume .bgImg span:nth-of-type(11) {
-  -webkit-animation-delay: 5.4s;
-          animation-delay: 5.4s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
 }
 .resume .bgImg span:nth-of-type(12) {
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 .resume .bgImg span:nth-of-type(13) {
-  -webkit-animation-delay: 5.6s;
-          animation-delay: 5.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 .resume .bgImg .mask {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #357080;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 .resume .aboutBox {
   position: relative;
@@ -470,6 +476,11 @@ html, body {
     border-radius: 0;
   }
 }
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter {
+    display: block;
+  }
+}
 .resume .aboutBox .aboutCenter .aboutLeft {
   position: relative;
   width: 50%;
@@ -479,6 +490,12 @@ html, body {
   .resume .aboutBox .aboutCenter .aboutLeft {
     width: 45%;
     height: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutLeft {
+    width: 50%;
+    margin-left: 25%;
   }
 }
 .resume .aboutBox .aboutCenter .aboutLeft img {
@@ -496,6 +513,11 @@ html, body {
 .resume .aboutBox .aboutCenter .aboutRight {
   width: 50%;
   word-wrap: break-word;
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight {
+    width: 100%;
+  }
 }
 .resume .aboutBox .aboutCenter .aboutRight h1 {
   margin-left: 10px;
@@ -552,17 +574,8 @@ html, body {
   margin-top: 120px;
 }
 @media screen and (max-width: 576px) {
-  .resume .aboutBox .aboutCenter .aboutRight .internet {
-    display: block;
-  }
-  .resume .aboutBox .aboutCenter .aboutRight .internet h1 {
-    position: absolute;
-  }
-  .resume .aboutBox .aboutCenter .aboutRight .internet a {
-    position: absolute;
-    top: 33%;
-    left: 39%;
-    word-wrap: break-word;
+  .resume .aboutBox .aboutCenter .aboutRight .name {
+    margin-top: 20px;
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV {
@@ -571,6 +584,11 @@ html, body {
 .resume .aboutBox .aboutCenter .aboutRight .CV p {
   font-size: 40px;
   font-weight: 700;
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight .CV p {
+    font-size: 30px;
+  }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV hr {
   width: 80%;
@@ -585,65 +603,25 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight .CV {
-    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 .resume .experience {
   position: relative;
   width: 100%;
-}
-.resume .experience .topBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.resume .experience .word-top {
-  font-size: 40px;
-  font-weight: 700;
-  padding: 50px 0 0 100px;
-  width: 50%;
-  color: #fff;
-}
-@media screen and (max-width: 768px) {
-  .resume .experience .word-top {
-    padding: 50px 0 0 50px;
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .resume .experience .word-top {
-    padding: 50px 0 0 10px;
-  }
-}
-.resume .experience hr {
-  margin-top: 20px;
-  width: 80%;
-  color: #e4c48d;
-  -webkit-box-shadow: 0 0 15px 2px;
-          box-shadow: 0 0 15px 2px;
-}
-.resume .experience .schoolTop {
-  font-size: 40px;
-  font-weight: 700;
-  padding: 50px 0 0 50px;
-  width: 50%;
-  color: #fff;
-}
-@media screen and (max-width: 768px) {
-  .resume .experience .schoolTop {
-    padding: 50px 0 0 50px;
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .resume .experience .schoolTop {
-    padding: 50px 0 0 10px;
-  }
+  overflow: hidden;
 }
 .resume .experience .workBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .workBottom {
+    display: block;
+  }
 }
 .resume .experience .workTime {
   display: -webkit-box;
@@ -651,30 +629,33 @@ html, body {
   display: flex;
   margin-left: 15%;
   width: 50%;
+  height: 100%;
 }
 @media screen and (max-width: 1024px) {
   .resume .experience .workTime {
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 @media screen and (max-width: 576px) {
   .resume .experience .workTime {
     margin-left: 0;
+    width: 100%;
   }
 }
 .resume .experience .workTime .line100 {
   position: relative;
   display: inline-block;
   height: 500px;
-  margin: 70px 0 0 0;
+  margin: 200px 0 0 0;
   border: solid 2px #E3C9C8;
 }
 @media screen and (max-width: 576px) {
   .resume .experience .workTime .line100 {
-    display: none;
+    height: 280px;
+    margin-left: 50%;
   }
 }
-.resume .experience .workTime .point0, .resume .experience .workTime .point33, .resume .experience .workTime .point66, .resume .experience .workTime .point99 {
+.resume .experience .workTime .line100 .point {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -682,26 +663,106 @@ html, body {
   margin: -5px;
   background-color: #FAE8C0;
 }
-.resume .experience .workTime .point33 {
-  top: 33%;
+.resume .experience .workTime .line100 .point .goodByelight {
+  width: 10px;
+  height: 10px;
+  background-color: #FAE8C0;
+  border-radius: 100%;
 }
-.resume .experience .workTime .point66 {
-  top: 66%;
+.resume .experience .workTime .line100 .point .goodByelight.light {
+  -webkit-box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+          box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+  -webkit-animation: none;
+          animation: none;
 }
-.resume .experience .workTime .point99 {
-  top: 100%;
+.resume .experience .workTime .line100 .point .goodByelight.blowlight {
+  -webkit-animation-name: blow;
+          animation-name: blow;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
-.resume .experience .workArea, .resume .experience .schoolArea {
-  margin: 15px 0 0 30px;
-}
-@media screen and (max-width: 576px) {
-  .resume .experience .workArea, .resume .experience .schoolArea {
-    margin: 15px 0 0 10px;
+@-webkit-keyframes blow {
+  0% {
+    -webkit-box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+            box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 10px 10px #FAE8C0;
+            box-shadow: 0 0 10px 10px #FAE8C0;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
+            transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
+    -webkit-box-shadow: 0 0 1px 1px #FAE8C0;
+            box-shadow: 0 0 1px 1px #FAE8C0;
+    opacity: 0;
   }
 }
-.resume .experience .workArea .work1, .resume .experience .schoolArea .work1 {
+@keyframes blow {
+  0% {
+    -webkit-box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+            box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 10px 10px #FAE8C0;
+            box-shadow: 0 0 10px 10px #FAE8C0;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
+            transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
+    -webkit-box-shadow: 0 0 1px 1px #FAE8C0;
+            box-shadow: 0 0 1px 1px #FAE8C0;
+    opacity: 0;
+  }
+}
+.resume .experience .workTime .line100 .position33 {
+  top: 33%;
+}
+.resume .experience .workTime .line100 .position66 {
+  top: 66%;
+}
+.resume .experience .workTime .line100 .position99 {
+  top: 100%;
+}
+.resume .experience .workArea {
+  margin: 15px 0 30px 30px;
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .workArea {
+    margin: 15px 0 10px 10px;
+  }
+}
+.resume .experience .workArea .word-top {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .resume .experience .workArea .word-top {
+    margin-top: 50px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .workArea .word-top {
+    margin-left: -100%;
+  }
+}
+.resume .experience .workArea hr {
+  margin-top: 20px;
+  width: 80%;
+  color: #e4c48d;
+  -webkit-box-shadow: 0 0 15px 2px;
+          box-shadow: 0 0 15px 2px;
+}
+.resume .experience .workArea .work1 {
   margin-top: 20px;
   border-radius: 20px;
+  width: 100%;
   padding: 10px;
   -webkit-box-shadow: -3px 3px 10px 1px;
           box-shadow: -3px 3px 10px 1px;
@@ -709,15 +770,28 @@ html, body {
           backdrop-filter: blur(10px);
 }
 @media screen and (max-width: 768px) {
-  .resume .experience .workArea .work1 h1, .resume .experience .schoolArea .work1 h1 {
+  .resume .experience .workArea .work1 h1 {
     font-size: 22px;
   }
-  .resume .experience .workArea .work1 h4, .resume .experience .schoolArea .work1 h4 {
+  .resume .experience .workArea .work1 h4 {
     font-size: 14px;
+    font-weight: 100;
   }
 }
 @media screen and (max-width: 576px) {
-  .resume .experience .workArea .work1 h1, .resume .experience .schoolArea .work1 h1 {
+  .resume .experience .workArea .work1 {
+    margin-left: -110%;
+  }
+  .resume .experience .workArea .work1:nth-child(3) {
+    margin: -30px 0 0 0;
+  }
+  .resume .experience .workArea .work1:nth-child(4) {
+    margin-top: -50px;
+  }
+  .resume .experience .workArea .work1:nth-child(5) {
+    margin: -30px 0 0 0;
+  }
+  .resume .experience .workArea .work1 h1 {
     font-size: 18px;
   }
 }
@@ -730,14 +804,16 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .resume .experience .schoolBox {
-    margin-left: 0;
+    margin: 30px 0 0 0;
+    width: 100%;
+    background-color: #6b737b;
   }
 }
 .resume .experience .schoolBox .line200 {
   position: relative;
   display: inline-block;
   height: 150px;
-  margin: 70px 0 0 0;
+  margin: 200px 0 0 0;
   border: solid 2px #E3C9C8;
 }
 @media screen and (max-width: 576px) {
@@ -745,7 +821,7 @@ html, body {
     display: none;
   }
 }
-.resume .experience .schoolBox .point01, .resume .experience .schoolBox .point100 {
+.resume .experience .schoolBox .point {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -753,10 +829,80 @@ html, body {
   margin: -5px;
   background-color: #FAE8C0;
 }
-.resume .experience .schoolBox .point100 {
+.resume .experience .schoolBox .point .goodByelight {
+  width: 10px;
+  height: 10px;
+  background-color: #FAE8C0;
+  border-radius: 100%;
+}
+.resume .experience .schoolBox .point .goodByelight.light {
+  -webkit-box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+          box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+  -webkit-animation: none;
+          animation: none;
+}
+.resume .experience .schoolBox .point .goodByelight.blowlight {
+  -webkit-animation-name: blow;
+          animation-name: blow;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+@keyframes blow {
+  0% {
+    -webkit-box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+            box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0, 0 0 15px 5px #FAE8C0, 0 0 5px 1px #FAE8C0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 10px 10px #FAE8C0;
+            box-shadow: 0 0 10px 10px #FAE8C0;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
+            transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
+    -webkit-box-shadow: 0 0 1px 1px #FAE8C0;
+            box-shadow: 0 0 1px 1px #FAE8C0;
+    opacity: 0;
+  }
+}
+.resume .experience .schoolBox .position100 {
   top: 100%;
 }
-.resume .experience .schoolBox .school {
+.resume .experience .schoolBox .schoolArea {
+  margin: 15px 0 0 30px;
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox .schoolArea {
+    margin: -70px 0 30px 0;
+  }
+}
+.resume .experience .schoolBox .schoolArea .schoolTop {
+  font-size: 40px;
+  font-weight: 700;
+  width: 100%;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .resume .experience .schoolBox .schoolArea .schoolTop {
+    margin-top: 50px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox .schoolArea .schoolTop {
+    padding: 50px 0 0 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox .schoolArea .schoolWord {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.resume .experience .schoolBox .schoolArea .school {
   margin-top: 20px;
   border-radius: 20px;
   padding: 10px;
@@ -765,22 +911,30 @@ html, body {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
+@media screen and (max-width: 576px) {
+  .resume .experience .schoolBox .schoolArea .school {
+    -webkit-box-shadow: 2px 2px 7px 3px #5e6165;
+            box-shadow: 2px 2px 7px 3px #5e6165;
+    border-radius: 0;
+    margin: 20px 10px 0 20px;
+  }
+}
 @media screen and (max-width: 768px) {
-  .resume .experience .schoolBox .school h1 {
+  .resume .experience .schoolBox .schoolArea .school h1 {
     font-size: 22px;
   }
-  .resume .experience .schoolBox .school h4 {
+  .resume .experience .schoolBox .schoolArea .school h4 {
     font-size: 14px;
+    font-weight: 100;
   }
 }
 @media screen and (max-width: 576px) {
-  .resume .experience .schoolBox .school h1 {
+  .resume .experience .schoolBox .schoolArea .school h1 {
     font-size: 18px;
   }
 }
 .resume .projectBox {
   position: relative;
-  margin-top: 120px;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -838,15 +992,16 @@ html, body {
   .resume .swiper-slide {
     width: 350px;
   }
-}
-@media screen and (max-width: 375px) {
-  .resume .swiper-slide {
-    width: 250px;
+  .resume .swiper-slide img {
+    width: 45%;
+    height: 40%;
   }
 }
-.resume .swiper-slide:hover img {
-  width: 45%;
-  height: 40%;
+@media screen and (min-width: 577px) {
+  .resume .swiper-slide:hover img {
+    width: 45%;
+    height: 40%;
+  }
 }
 .resume .swiper-slide img {
   -webkit-transition: 0.5s;
@@ -857,6 +1012,12 @@ html, body {
   height: 90%;
   z-index: 77;
 }
+@media screen and (max-width: 576px) {
+  .resume .swiper-slide img {
+    width: 45%;
+    height: 40%;
+  }
+}
 .resume .swiper-slide .swiperBox1 {
   position: relative;
   display: -webkit-box;
@@ -865,13 +1026,13 @@ html, body {
   height: 50%;
 }
 .resume .swiper-slide .swiperBox1 .smallImg {
-  width: 45%;
+  width: 50%;
   height: 100%;
 }
 .resume .swiper-slide .swiperBox1 .rightPojword {
   text-align: center;
   margin-top: 15%;
-  width: 55%;
+  width: 50%;
   height: 40%;
   color: black;
 }
@@ -895,6 +1056,8 @@ html, body {
 }
 .resume .swiper-slide .swiperWord1 p {
   color: white;
+  padding: 16px;
+  font-size: 16px;
 }
 .resume .swiper-slide .swiperWord1 a {
   font-size: 20px;

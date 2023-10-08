@@ -13,32 +13,6 @@ html,body
   height: 50px
   border-radius: 100%
 
-// .dly
-//   animation-delay: 4.1s
-// .dly1
-//   animation-delay: 4.15s
-// .dly2
-//   animation-delay: 4.2s
-// .dly3
-//   animation-delay: 4.25s
-// .dly4
-//   animation-delay: 4.3s
-// .dly5
-//   animation-delay: 4.35s
-// .dly6
-//   animation-delay: 4.4s
-// .dly7
-//   animation-delay: 4.45s
-// .dly8
-//   animation-delay: 4.5s
-// .dly9
-//   animation-delay: 4.55s
-// .dly10
-//   animation-delay: 4.6s
-// .dly11
-//   animation-delay: 4.65s
-// .dly12
-//   animation-delay: 4.7s
 
 .font
   font-family: "微軟正黑體"
@@ -132,6 +106,7 @@ html,body
   width: 100%
   .rightBar
     position: fixed
+    display: none
     width: 90px
     height: 200px
     z-index: 99
@@ -139,6 +114,7 @@ html,body
     right: 5px
     line-height: 40px
     transform: translateY(-50%)
+    overflow: hidden
     @media screen and (max-width: 768px)
       display: none
     .right-about,.right-experience,.right-project,.right-professional
@@ -194,14 +170,17 @@ html,body
         border-radius: 100%
         bottom: -60px
         left: 10px
+        z-index: 99
         box-shadow: 1100px -100px 200px 100px #92A9AF
         animation: move 18s infinite
+        @media screen and (max-width: 1024px)
+          animation: move 22s infinite
         .c1-1
           box-shadow: 100px -200px 140px 100px #92A9AF
         .c1-2
-          box-shadow: 600px -450px 170px 200px #92A9AF
-          @media screen and (max-width: 576px)
-            box-shadow: 600px -450px 170px 100px #92A9AF
+          box-shadow: 600px -350px 170px 200px #92A9AF
+          // @media screen and (max-width: 576px)
+          //   box-shadow: 600px -450px 170px 150px #92A9AF
       @keyframes move
         0%
           bottom: -60px
@@ -246,44 +225,37 @@ html,body
         transform: translate(-50% , 0)
     span
       display: inline-block
-      text-shadow: 0 0 0 #92A9AF
+      text-shadow: 0 1px 10px black
       animation-name: smoky 
-      animation-duration: 4s 
-      animation-fill-mode: both
+      animation-duration: 3s 
+      animation-fill-mode: infinite
       font-weight: 700
       color: #92A9AF
       @media screen and (max-width: 576px)
         font-size: 30px
+        animation: none
 
         //文字被吹走效果
-    @keyframes smoky  
+    @keyframes smoky 
       40%
         text-shadow: 0 0 .6em #92A9AF
         color: transparent
       100%
         transform: translate3d(5rem,-1rem,0) rotate(-15deg) skewX(90deg) scale(1.5)
-        text-shadow: 0 0 0.7em #92A9AF
-        color: transparent
+        text-shadow: 0 0 0.9em #92A9AF
+        // color: transparent
         opacity: 0
     @for $i from 1 through 13
       span:nth-of-type(#{$i})
-        animation-delay: #{(4.3 + ($i/10))}s
-        // transform: translate3d(15rem,-8rem,0) rotate(-40deg) skewX(70deg) scale(1.5)
-    // span:nth-child(even)
-    //   animation-name: smoky-mirror
-    // @keyframes smoky-mirror
-    //   60%
-    //     text-shadow: 0 0 40px whitesmoke
-    //   100%
-    //     transform: translate3d(18rem,-8rem,0) rotate(-40deg) skewX(70deg) scale(2)
-    //     text-shadow: 0 0 20px whitesmoke
-    //     opacity: 0
-
+        animation-delay: #{(1.3 + ($i/10))}s
     .mask
       position: absolute
       width: 100%
       height: 100%
       background-color: #357080
+      opacity: 0
+      transition: opacity .5s
+
   .aboutBox
     position: relative
     margin-top: 100vh
@@ -294,13 +266,13 @@ html,body
       display: flex
       width: 100%
       height: 100%
-      // left: 10% 
-      // border-radius: 30px
       background-color: #dbd0c2
       @media screen and (max-width: 768px)
         width: 100%
         left: 0
         border-radius: 0
+      @media screen and (max-width: 576px)
+        display: block
       .aboutLeft
         position: relative
         width: 50%
@@ -308,6 +280,9 @@ html,body
         @media screen and (max-width: 768px)
           width: 45%
           height: 50%
+        @media screen and (max-width: 576px)
+          width: 50%
+          margin-left: 25%
         img
           position: absolute
           top: 50%
@@ -315,10 +290,13 @@ html,body
           transform: translate(-50% , -50%)
           @media screen and (max-width: 1024px)
             width: 90%
+          @media screen and (max-width: 576px)
 
       .aboutRight
         width: 50%
         word-wrap: break-word
+        @media screen and (max-width: 576px)
+          width: 100%
         h1
           margin-left: 10px
           @media screen and (max-width: 1024px)
@@ -348,21 +326,17 @@ html,body
           margin-top: 20px
         .name
           margin-top: 120px
+          @media screen and (max-width: 576px)
+            margin-top: 20px
         .internet 
           @media screen and (max-width: 576px)
-            display: block
-            h1
-              position: absolute
-            a
-              position: absolute
-              top: 33%
-              left: 39%
-              word-wrap: break-word
         .CV
           margin-top: 30px
           p
             font-size: 40px
             font-weight: 700
+            @media screen and (max-width: 576px)
+              font-size: 30px
           hr
             width: 80%
             border: solid 2px #8a837a
@@ -371,89 +345,115 @@ html,body
             top: 45%  
             left: 10% 
           @media screen and (max-width: 576px)
-            display: block
+            position: relative
+            top: 0
+            left: 0
       
   .experience
     position: relative
     width: 100%
-    .topBox
-      display: flex
-    .word-top
-      font-size: 40px
-      font-weight: 700
-      padding: 50px 0 0 100px
-      width: 50%
-      color: #fff
-      @media screen and (max-width: 768px)
-        padding: 50px 0 0 50px
-        font-size: 28px
-      @media screen and (max-width: 576px)
-        padding: 50px 0 0 10px
-    hr
-      margin-top: 20px
-      width: 80%
-      color: #e4c48d
-      box-shadow: 0 0 15px 2px
-    .schoolTop 
-      font-size: 40px
-      font-weight: 700
-      padding: 50px 0 0 50px
-      width: 50%
-      color: #fff
-      @media screen and (max-width: 768px)
-        padding: 50px 0 0 50px
-        font-size: 28px 
-      @media screen and (max-width: 576px)
-        padding: 50px 0 0 10px
+    overflow: hidden
     .workBottom
       display: flex
+      @media screen and (max-width: 576px)
+        display: block
     .workTime
       display: flex
       margin-left: 15%  
       width: 50%
+      height: 100%
       @media screen and (max-width: 1024px)
-        margin-left: 10%
+        margin-left: 5%
       @media screen and (max-width: 576px)
         margin-left: 0
-      
+        width: 100%
       
       .line100
         position: relative
         display: inline-block
         height: 500px
-        margin: 70px 0 0 0
+        margin: 200px 0 0 0
         border: solid 2px #E3C9C8
         @media screen and (max-width: 576px)
-          display: none
-      .point0,.point33,.point66,.point99
-        position: absolute
-        width: 10px
-        height: 10px
-        border-radius: 100%
-        margin: -5px 
-        background-color: #FAE8C0
-      .point33
-        top: 33%
-      .point66
-        top: 66%
-      .point99
-        top: 100%
-    .workArea,.schoolArea
-      margin: 15px 0 0 30px
+          height: 280px
+          margin-left: 50%
+        .point
+          position: absolute
+          width: 10px
+          height: 10px
+          border-radius: 100%
+          margin: -5px 
+          background-color: #FAE8C0
+          .goodByelight
+            width: 10px
+            height: 10px
+            background-color: #FAE8C0
+            border-radius: 100%
+            &.light
+              box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0,0 0 15px 5px #FAE8C0,0 0 5px 1px #FAE8C0
+              animation: none
+            &.blowlight
+              animation-name: blow 
+              animation-duration: 1s 
+              animation-fill-mode: backwards
+              @keyframes blow
+                0%
+                  box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0,0 0 15px 5px #FAE8C0,0 0 5px 1px #FAE8C0
+                60%
+                  box-shadow: 0 0 10px 10px #FAE8C0
+                  opacity: 0
+                100%
+                  transform: translate3d(-3rem,0rem,0) rotate(0deg) skewX(45deg) scale(1.5)
+                  box-shadow: 0 0 1px 1px #FAE8C0
+                  opacity: 0
+        .position33
+          top: 33%
+        .position66
+          top: 66%
+        .position99
+          top: 100%
+    .workArea
+      margin: 15px 0 30px 30px
       @media screen and (max-width: 576px)
-        margin: 15px 0 0 10px
+        margin: 15px 0 10px 10px
+      
+      .word-top
+        font-size: 40px
+        font-weight: 700
+        color: #fff
+        @media screen and (max-width: 768px)
+          margin-top: 50px
+          font-size: 28px
+        @media screen and (max-width: 576px)
+          margin-left: -100%
+          
+      hr
+        margin-top: 20px
+        width: 80%
+        color: #e4c48d
+        box-shadow: 0 0 15px 2px
       .work1
         margin-top: 20px
         border-radius: 20px
+        width: 100%
         padding: 10px
         box-shadow: -3px 3px 10px 1px
         backdrop-filter: blur(10px)
+        
         @media screen and (max-width: 768px)
           h1
             font-size: 22px
           h4
             font-size: 14px
+            font-weight: 100
         @media screen and (max-width: 576px)
+          margin-left: -110%
+          &:nth-child(3)
+            margin: -30px 0 0 0
+          &:nth-child(4)
+            margin-top: -50px
+          &:nth-child(5)
+            margin: -30px 0 0 0
           h1
             font-size: 18px
     .schoolBox
@@ -461,43 +461,88 @@ html,body
       margin-left: 5%  
       width: 50%
       @media screen and (max-width: 576px)
-        margin-left: 0
+        margin: 30px 0 0 0
+        width: 100%
+        background-color: #6b737b
+        
       .line200
         position: relative
         display: inline-block
         height: 150px
-        margin: 70px 0 0 0
+        margin: 200px 0 0 0
         border: solid 2px #E3C9C8
         @media screen and (max-width: 576px)
           display: none
-      .point01,.point100
+      .point
         position: absolute
         width: 10px
         height: 10px
         border-radius: 100%
         margin: -5px 
         background-color: #FAE8C0
-      .point100
+        .goodByelight
+            width: 10px
+            height: 10px
+            background-color: #FAE8C0
+            border-radius: 100%
+            &.light
+              box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0,0 0 15px 5px #FAE8C0,0 0 5px 1px #FAE8C0
+              animation: none
+            &.blowlight
+              animation-name: blow 
+              animation-duration: 1s 
+              animation-fill-mode: backwards
+              @keyframes blow
+                0%
+                  box-shadow: 0 0 50px 20px #FAE8C0, 0 0 30px 10px #FAE8C0,0 0 15px 5px #FAE8C0,0 0 5px 1px #FAE8C0
+                60%
+                  box-shadow: 0 0 10px 10px #FAE8C0
+                  opacity: 0
+                100%
+                  transform: translate3d(-3rem,0rem,0) rotate(0deg) skewX(45deg) scale(1.5)
+                  box-shadow: 0 0 1px 1px #FAE8C0
+                  opacity: 0
+      .position100
         top: 100%
-      .school
-        margin-top: 20px
-        border-radius: 20px
-        padding: 10px
-        box-shadow: 3px 3px 10px 1px
-        backdrop-filter: blur(10px)
-        @media screen and (max-width: 768px)
-          h1
-            font-size: 22px
-          h4
-            font-size: 14px
+      .schoolArea
+        margin: 15px 0 0 30px
         @media screen and (max-width: 576px)
-          h1
-            font-size: 18px
+          margin: -70px 0 30px 0
+        .schoolTop 
+          font-size: 40px
+          font-weight: 700
+          width: 100%
+          color: #fff
+          @media screen and (max-width: 768px)
+            margin-top: 50px
+            font-size: 28px 
+          @media screen and (max-width: 576px)
+            padding: 50px 0 0 10px
+        .schoolWord
+          @media screen and (max-width: 576px)
+            display: flex
+        .school
+          margin-top: 20px
+          border-radius: 20px
+          padding: 10px
+          box-shadow: 3px 3px 10px 1px
+          backdrop-filter: blur(10px)
+          @media screen and (max-width: 576px)
+            box-shadow: 2px 2px 7px 3px #5e6165
+            border-radius: 0
+            margin: 20px 10px 0 20px
+          @media screen and (max-width: 768px)
+            h1
+              font-size: 22px
+            h4
+              font-size: 14px
+              font-weight: 100
+          @media screen and (max-width: 576px)
+            h1
+              font-size: 18px
 
   .projectBox
     position: relative
-    // height: 65%
-    margin-top: 120px
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif
     font-size: 14px
     color: #000
@@ -534,18 +579,18 @@ html,body
     height: 100%
     @media screen and (max-width: 768px)
       width: 450px
-      // height: 350px
     @media screen and (max-width: 576px)
       width: 350px
-      // height: 250px
-    @media screen and (max-width: 375px)
-      width: 250px
-      // height: 150px
-    &:hover
       img
-        width: 45%
-        height: 40%
-      .rightPojword
+          width: 45%
+          height: 40%
+    @media screen and (min-width: 577px)
+      &:hover
+        img
+          width: 45%
+          height: 40%
+    
+      
 
     img
       transition: .5s
@@ -553,21 +598,22 @@ html,body
       display: block
       width: 100%
       height: 90%
-      // height: 400px
-      // border-radius: 30px 30px 0 0 
       z-index: 77
+      @media screen and (max-width: 576px)
+        width: 45%
+        height: 40%
       
     .swiperBox1
       position: relative
       display: flex
       height: 50%
       .smallImg 
-        width: 45%
+        width: 50%
         height: 100%
       .rightPojword
         text-align: center
         margin-top: 15%
-        width: 55%
+        width: 50%
         height: 40%
         color: black
     .swiperWord1
@@ -575,8 +621,6 @@ html,body
       width: 100%
       height: 90%
       background-color: #859eaa
-      // backdrop-filter: blur(5px)
-      // color: #9698a8 
       font-size: 30px
       font-weight: 700
       @media screen and (max-width: 576px)
@@ -585,6 +629,8 @@ html,body
         font-size: 18px
       p
         color: white
+        padding: 16px
+        font-size: 16px
       a 
         font-size: 20px
         position: absolute

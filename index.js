@@ -28,14 +28,17 @@ AOS.init();
 //   $(this).find('p').text("Professional")
 // })
 
-
-$(window).on('scroll',function(){
+   ///計算背景遮罩顏色
+function opacityControl(){
   let opacity = $(window).scrollTop()/3500;
-  console.log(opacity)
   $('.mask').css("opacity",`${opacity}`)
+}
+$(window).on('scroll',function(){
+  opacityControl()
   })
+opacityControl()
 
-
+      //點擊按鈕後定位
 $(".aboutMe").on("click",function(){
   $('html,body').animate({scrollTop:750}, 100)
 })
@@ -52,7 +55,6 @@ $(".naveProfessional").on("click",function(){
 
 $(window).on('scroll',function(){
   const top = $(window).scrollTop()
-  // console.log(top)
   if(top == 0){
     $(".naveBgc").css("top","-70px")
     $(".name").css("color","white")
@@ -61,10 +63,14 @@ $(window).on('scroll',function(){
   }else if(top >= 100 && top <= 499){
     $(".right1,.right2,.right3,.right4").css("right" , "-110px")
     $(".cloud").css("display" , "block")
+    $(".rightBar").css("display" , "none")
+    $(".indexCenter").css("display" , "block")
   }else if(top >= 500 && top <= 1249){
     $(".right1").css("right" , "-15px")
     $(".right2,.right3,.right4").css("right" , "-110px")
     $(".cloud").css("display" , "none")
+    $(".rightBar").css("display" , "block")
+    $(".indexCenter").css("display" , "none")
   }else if(top >= 1250 && top <= 2177){
     $(".right2").css("right" , "-11px")
     $(".right1,.right3,.right4").css("right" , "-110px")
@@ -81,6 +87,28 @@ $(window).on('scroll',function(){
     $(".bottomArrow").css("display" , "none")
   }
 })
+
+$(".work1").on("mouseenter",function(){
+  const index = $(this).index()
+  $('.experience .goodByelight').eq(index -1).addClass("light")
+})
+$(".work1").on("mouseleave",function(){
+  const index = $(this).index()
+  $(".goodByelight").removeClass("light")
+  $('.experience .goodByelight').eq(index -1).addClass("blowlight")
+  setTimeout(function(){$(".blowlight").removeClass("blowlight")},1000)
+})
+$(".school").on("mouseenter",function(){
+  const index = $(this).index()
+  $('.schoolBox .goodByelight').eq(index).addClass("light")
+})
+$(".school").on("mouseleave",function(){
+  const index = $(this).index()
+  $(".goodByelight").removeClass("light")
+  $('.schoolBox .goodByelight').eq(index).addClass("blowlight")
+  setTimeout(function(){$(".blowlight").removeClass("blowlight")},1000)
+})
+
 
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
