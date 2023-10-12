@@ -532,11 +532,6 @@ html, body {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 576px) {
-  .resume .aboutBox .aboutCenter .aboutRight h1 {
-    font-size: 18px;
-  }
-}
 .resume .aboutBox .aboutCenter .aboutRight h2 {
   margin-left: 20px;
 }
@@ -548,16 +543,20 @@ html, body {
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight h2 {
     font-size: 14px;
-    margin-left: 0px;
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight a {
   font-size: 22px;
   margin-left: 20px;
 }
+@media screen and (max-width: 768px) {
+  .resume .aboutBox .aboutCenter .aboutRight a {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 576px) {
-  .resume .aboutBox .aboutCenter .aboutRight .icon-user-tie, .resume .aboutBox .aboutCenter .aboutRight .icon-mail4, .resume .aboutBox .aboutCenter .aboutRight .icon-IE, .resume .aboutBox .aboutCenter .aboutRight .icon-mobile {
-    display: none;
+  .resume .aboutBox .aboutCenter .aboutRight a {
+    font-size: 14px;
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .name, .resume .aboutBox .aboutCenter .aboutRight .phone, .resume .aboutBox .aboutCenter .aboutRight .mail, .resume .aboutBox .aboutCenter .aboutRight .internet {
@@ -575,6 +574,11 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight .name {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight .internet {
     margin-top: 20px;
   }
 }
