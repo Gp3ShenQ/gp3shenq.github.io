@@ -1,33 +1,4 @@
 AOS.init();
-
-// $(".aboutMe").on('mouseover',function(){
-//   $(this).find('p').text("關於我")
-// })
-// $(".aboutMe").on('mouseleave',function(){
-//   $(this).find('p').text("AboutMe")
-// })
-
-// $(".naveWork").on('mouseover',function(){
-//   $(this).find('p').text("工作經歷")
-// })
-// $(".naveWork").on('mouseleave',function(){
-//   $(this).find('p').text("Experience")
-// })
-
-// $(".navePoj").on('mouseover',function(){
-//   $(this).find('p').text("作品")
-// })
-// $(".navePoj").on('mouseleave',function(){
-//   $(this).find('p').text("Project")
-// })
-
-// $(".naveProfessional").on('mouseover',function(){
-//   $(this).find('p').text("職業技能")
-// })
-// $(".naveProfessional").on('mouseleave',function(){
-//   $(this).find('p').text("Professional")
-// })
-
    ///計算背景遮罩顏色
 function opacityControl(){
   let opacity = $(window).scrollTop()/3500;
@@ -38,20 +9,28 @@ $(window).on('scroll',function(){
   })
 opacityControl()
 
+
+
+
       //點擊按鈕後定位
 $(".aboutMe").on("click",function(){
-  $('html,body').animate({scrollTop:750}, 100)
+  $('html,body').animate({scrollTop:890}, 100)
 })
 $(".naveWork").on("click",function(){
-  $('html,body').animate({scrollTop:1620}, 100)
+  $('html,body').animate({scrollTop:1769}, 100)
 })
 $(".navePoj").on("click",function(){
   $('html,body').animate({scrollTop:2550}, 100)
 })
 $(".naveProfessional").on("click",function(){
-  $('html,body').animate({scrollTop:3300}, 100)
+  $('html,body').animate({scrollTop:3500}, 100)
 })
 
+
+  if($(window).scrollTop() >= 499){
+    $(".indexCenter").css("display" , "none")
+    $(".cloud").css("display" , "none")
+  }
 
 $(window).on('scroll',function(){
   const top = $(window).scrollTop()
@@ -77,7 +56,7 @@ $(window).on('scroll',function(){
   }else if(top >= 2178 && top <= 2877){
     $(".right3").css("right" , "-28px")
     $(".right1,.right2,.right4").css("right" , "-110px")
-  }else if(top >= 2876 && top <= 3000){
+  }else if(top >= 2876 && top <= 3500){
     $(".right1,.right2,.right3 ").css("right" , "-110px")
     $(".right4").css("right" , "-2px")
   }else{
@@ -87,6 +66,7 @@ $(window).on('scroll',function(){
     $(".bottomArrow").css("display" , "none")
   }
 })
+
 
 $(".work1").on("mouseenter",function(){
   const index = $(this).index()
@@ -127,3 +107,26 @@ var swiper = new Swiper(".mySwiper", {
   // },
 });
 
+function addpercen(){
+  $(window).on("scroll",function(){
+    if($(window).scrollTop() >= 3200){
+      $(".percentage").each((index,el)=>{
+        const data = $(el).attr('data')
+        let number = 0;
+        $(el).siblings(".circle-inner").css("width",data+"%")
+        const timer = setInterval(()=>{
+          if(number < data){
+            number += 1
+            $(el).text(number+"%")
+          }else if($(window).scrollTop() <= 2900){
+            $(".circle-inner").css("width","0")
+            $(el).text(0 + "%")
+          }else{
+            clearInterval(timer)
+          }
+        },10)
+      })
+    }
+  })
+}
+addpercen()

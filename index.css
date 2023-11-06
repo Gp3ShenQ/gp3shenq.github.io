@@ -570,11 +570,11 @@ html, body {
   margin-top: 20px;
 }
 .resume .aboutBox .aboutCenter .aboutRight .name {
-  margin-top: 120px;
+  margin-top: 40px;
 }
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight .name {
-    margin-top: 20px;
+    margin-top: -50px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -583,7 +583,12 @@ html, body {
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV {
-  margin-top: 30px;
+  margin-left: -50px;
+}
+@media screen and (max-width: 1024px) {
+  .resume .aboutBox .aboutCenter .aboutRight .CV {
+    margin-left: 0;
+  }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV p {
   font-size: 40px;
@@ -591,26 +596,35 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight .CV p {
-    font-size: 30px;
+    font-size: 22px;
+    padding-left: 20px;
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV hr {
   width: 80%;
   border: solid 2px #8a837a;
 }
+@media screen and (max-width: 576px) {
+  .resume .aboutBox .aboutCenter .aboutRight .CV hr {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .resume .aboutBox .aboutCenter .aboutRight .CV {
     position: absolute;
-    top: 45%;
+    top: 48%;
     left: 10%;
   }
 }
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight .CV {
     position: relative;
-    top: 0;
+    top: 20px;
     left: 0;
   }
+}
+.resume .aboutBox .aboutCenter .aboutRight .CV h2 {
+  width: 80%;
 }
 .resume .experience {
   position: relative;
@@ -1125,17 +1139,46 @@ html, body {
     font-size: 34px;
   }
 }
-.ProfessionalBox .professionalBox .pro-inner {
+.ProfessionalBox .circle-box {
+  width: 60%;
+}
+.ProfessionalBox .circle-area {
+  width: 100%;
+  height: 25%;
+  padding-bottom: 30px;
+}
+.ProfessionalBox .circle-outside {
+  position: relative;
+  max-width: 700px;
+  min-width: 300px;
+  height: 20px;
+  background-color: #bc9052;
+  margin: 60px 50px;
+  border-radius: 20px;
+  z-index: 0.1;
+}
+.ProfessionalBox .circle-text {
+  position: absolute;
+  top: -40px;
   font-size: 30px;
-  margin: 30px 0 0 50px;
+  left: 10px;
 }
-@media screen and (max-width: 768px) {
-  .ProfessionalBox .professionalBox .pro-inner {
-    margin: 30px 0 0 0;
-  }
+.ProfessionalBox .circle-inner {
+  position: relative;
+  width: 0;
+  height: 20px;
+  background-color: #aeef2e;
+  border-radius: 20px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  z-index: 0.1;
 }
-@media screen and (max-width: 576px) {
-  .ProfessionalBox .professionalBox .pro-inner {
-    font-size: 18px;
-  }
+.ProfessionalBox .percentage {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-top: -5px;
+  text-align: center;
+  color: black;
+  z-index: 1;
 }
