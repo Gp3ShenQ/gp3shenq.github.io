@@ -108,19 +108,16 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 function addpercen(){
+  $(".percentage").each((index,el)=>{el.number = 0})
   $(window).on("scroll",function(){
-    if($(window).scrollTop() >= 2900){
+    if($(window).scrollTop() >= 3100){
       $(".percentage").each((index,el)=>{
         const data = $(el).attr('data')
-        let number = 0;
         $(el).siblings(".circle-inner").css("width",data+"%")
         const timer = setInterval(()=>{
-          if(number < data){
-            number += 1
-            $(el).text(number+"%")
-          }else if($(window).scrollTop() <= 2900){
-            $(".circle-inner").css("width","0")
-            $(el).text(0 + "%")
+          if(el.number < data){
+            el.number += 1
+            $(el).text(el.number+"%")
           }else{
             clearInterval(timer)
           }
