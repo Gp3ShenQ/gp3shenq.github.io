@@ -979,8 +979,8 @@ html, body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  background-image: url("./img/bgImg/bgimg9.jpg");
-  background-position: bottom;
+  background-image: url("./img/bgImg/bgimg14.jpg");
+  background-position: center;
   background-size: cover;
 }
 .resume .project-title {
@@ -1168,7 +1168,7 @@ html, body {
   }
 }
 .ProfessionalBox .circle-box {
-  width: 60%;
+  width: 90%;
 }
 .ProfessionalBox .circle-area {
   width: 100%;
@@ -1228,5 +1228,19 @@ html, body {
 }
 .ProfessionalBox .circle-inner-text {
   width: 100%;
-  font-size: 22px;
+  margin: -30px 0 0 50px;
+}
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .circle-inner-text {
+    margin: -30px 0 0 0;
+  }
+}
+.ProfessionalBox .circle-inner-text p {
+  font-size: 26px;
+  line-height: 50px;
+}
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .circle-inner-text p {
+    font-size: 22px;
+  }
 }
