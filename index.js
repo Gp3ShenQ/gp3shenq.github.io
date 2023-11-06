@@ -109,7 +109,7 @@ var swiper = new Swiper(".mySwiper", {
 
 function addpercen(){
   $(window).on("scroll",function(){
-    if($(window).scrollTop() >= 3200){
+    if($(window).scrollTop() >= 2900){
       $(".percentage").each((index,el)=>{
         const data = $(el).attr('data')
         let number = 0;

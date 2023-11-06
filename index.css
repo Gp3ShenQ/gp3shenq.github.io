@@ -69,9 +69,25 @@ html, body {
   display: flex;
   margin: 10px 0 0 1%;
 }
+@media screen and (max-width: 375px) {
+  .naveMark {
+    margin-top: 2px;
+  }
+}
 @media screen and (max-width: 768px) {
   .naveMark .mark {
     display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .naveMark .mark {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  .naveMark .mark img {
+    width: 100%;
+    height: 100%;
   }
 }
 .naveMark .name {
@@ -91,6 +107,11 @@ html, body {
 @media screen and (max-width: 576px) {
   .naveMark .name {
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .naveMark .name {
+    display: none;
   }
 }
 
@@ -467,7 +488,9 @@ html, body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #dbd0c2;
+  background-image: url("./img/bgImg/bgimg12.png");
+  background-position: right bottom;
+  background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .resume .aboutBox .aboutCenter {
@@ -624,7 +647,7 @@ html, body {
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV h2 {
-  width: 80%;
+  width: 90%;
 }
 .resume .experience {
   position: relative;
@@ -956,7 +979,9 @@ html, body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  background-color: #5e879a;
+  background-image: url("./img/bgImg/bgimg9.jpg");
+  background-position: bottom;
+  background-size: cover;
 }
 .resume .project-title {
   position: relative;
@@ -976,6 +1001,9 @@ html, body {
   .resume .project-title {
     padding: 50px 0 0 10px;
   }
+}
+.resume .project-title p {
+  color: black;
 }
 .resume hr {
   margin-top: 20px;
@@ -1127,7 +1155,7 @@ html, body {
 }
 @media screen and (max-width: 576px) {
   .ProfessionalBox .professionalBox {
-    padding: 50px 0 0 50px;
+    padding: 50px 0 0 20px;
   }
 }
 .ProfessionalBox .professionalBox .pro-title {
@@ -1157,11 +1185,22 @@ html, body {
   border-radius: 20px;
   z-index: 0.1;
 }
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .circle-outside {
+    margin-left: 0;
+    height: 10px;
+  }
+}
 .ProfessionalBox .circle-text {
   position: absolute;
   top: -40px;
   font-size: 30px;
   left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .ProfessionalBox .circle-text {
+    font-size: 22px;
+  }
 }
 .ProfessionalBox .circle-inner {
   position: relative;
@@ -1173,6 +1212,11 @@ html, body {
           transition-duration: 1s;
   z-index: 0.1;
 }
+@media screen and (max-width: 576px) {
+  .ProfessionalBox .circle-inner {
+    height: 10px;
+  }
+}
 .ProfessionalBox .percentage {
   position: absolute;
   left: 50%;
@@ -1181,4 +1225,8 @@ html, body {
   text-align: center;
   color: black;
   z-index: 1;
+}
+.ProfessionalBox .circle-inner-text {
+  width: 100%;
+  font-size: 22px;
 }

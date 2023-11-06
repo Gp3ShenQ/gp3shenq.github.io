@@ -53,10 +53,19 @@ html,body
   position: relative
   display: flex
   margin: 10px 0 0 1%
+  @media screen and (max-width: 375px)
+    margin-top: 2px
 
   .mark
     @media screen and (max-width: 768px)
       display: none
+    @media screen and (max-width: 375px)
+      width: 30px
+      height: 30px
+      display: block
+      img
+        width: 100%
+        height: 100%
   .name
     font-size: 40px
     font-weight: 700
@@ -69,6 +78,8 @@ html,body
       margin-left: 0
     @media screen and (max-width: 576px)
       font-size: 18px    
+    @media screen and (max-width: 375px)
+      display: none
 .introduce
   position: absolute
   display: flex
@@ -216,7 +227,6 @@ html,body
       top: 50%
       left: 50%
       transform: translate(-50% , -50%)
-      // border: solid 1px black
       backface-visibility: hidden
       font-size: 50px
       @media screen and (max-width: 576px)
@@ -266,7 +276,10 @@ html,body
       display: flex
       width: 100%
       height: 100%
-      background-color: #dbd0c2
+      // background-color: #dbd0c2
+      background-image: url("./img/bgImg/bgimg12.png")
+      background-position: right bottom
+      background-size: cover
       @media screen and (max-width: 768px)
         width: 100%
         left: 0
@@ -306,7 +319,6 @@ html,body
           @media screen and (max-width: 576px)
             // font-size: 20px
         h2
-          // width: 80%
           margin-left: 20px
           @media screen and (max-width: 1024px)
             font-size: 18px
@@ -330,10 +342,10 @@ html,body
           margin-top: 40px
           @media screen and (max-width: 576px)
             margin-top: -50px
+          
         .internet 
           @media screen and (max-width: 576px)
             margin-top: 20px
-          @media screen and (max-width: 375px)
         .CV
           margin-left: -50px
           @media screen and (max-width: 1024px)
@@ -358,7 +370,7 @@ html,body
             top: 20px
             left: 0
           h2 
-            width: 80%
+            width: 90%
       
   .experience
     position: relative
@@ -557,7 +569,10 @@ html,body
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif
     font-size: 14px
     color: #000
-    background-color: #5e879a
+    // background-color: #5e879a
+    background-image: url("./img/bgImg/bgimg9.jpg")
+    background-position: bottom
+    background-size: cover
   .project-title
     position: relative
     font-size: 40px
@@ -570,6 +585,8 @@ html,body
       font-size: 28px
     @media screen and (max-width: 576px)
       padding: 50px 0 0 10px
+    p
+      color: black
   hr
     margin-top: 20px
     width: 80%
@@ -601,8 +618,6 @@ html,body
           width: 45%
           height: 40%
     
-      
-
     img
       transition: .5s
       position: absolute
@@ -652,8 +667,6 @@ html,body
         &:hover
           color: #463d3d
 
-
-
 .ProfessionalBox
   width: 100%
   height: 700px  
@@ -680,27 +693,17 @@ html,body
     padding: 50px 0 0 100px
     color: #fff
     @media screen and (max-width: 576px)
-      padding: 50px 0 0 50px
+      padding: 50px 0 0 20px
     .pro-title
       font-size: 50px 
       font-weight: 700
       @media screen and (max-width: 768px)
         font-size: 34px
-    // .pro-inner 
-    //   font-size: 30px
-    //   margin: 30px 0 0 50px
-    //   @media screen and (max-width: 768px)
-    //     margin: 30px 0 0 0 
-    //   @media screen and (max-width: 576px)
-    //     font-size: 18px
   .circle-box
     width: 60%
-    // height: 70vh
   .circle-area
     width: 100%
     height: 25%
-    // display: flex
-    // justify-content: space-between
     padding-bottom: 30px
   .circle-outside
     position: relative
@@ -711,31 +714,38 @@ html,body
     margin: 60px 50px
     border-radius: 20px
     z-index: 0.1
+    @media screen and (max-width: 576px)
+      margin-left: 0
+      height: 10px
   .circle-text
     position: absolute
     top: -40px
     font-size: 30px
     left: 10px
+    @media screen and (max-width: 768px)
+      font-size: 22px
+    // @media screen and (max-width: 576px)
+    //   font-size: 22px
+    
   .circle-inner
     position: relative
-    // position: absolute
     width: 0
     height: 20px
     background-color: #aeef2e 
     border-radius: 20px
     transition-duration: 1s
     z-index: 0.1
+    @media screen and (max-width: 576px)
+      height: 10px
   .percentage
     position: absolute
-    // position: fixed
     left: 50%
     top: 0
     margin-top: -5px
     text-align: center
     color: black
     z-index: 1
-      // left: 50%
-      // transform: translateX(-50%)
-          
-
+  .circle-inner-text
+    width: 100%
+    font-size: 22px
 
