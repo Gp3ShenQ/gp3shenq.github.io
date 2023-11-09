@@ -523,14 +523,20 @@ html, body {
 }
 .resume .aboutBox .aboutCenter .aboutLeft img {
   position: absolute;
+  width: 40%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1440px) {
+  .resume .aboutBox .aboutCenter .aboutLeft img {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .resume .aboutBox .aboutCenter .aboutLeft img {
-    width: 90%;
+    width: 70%;
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight {
@@ -979,7 +985,7 @@ html, body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  background-image: url("./img/bgImg/bgimg15.png");
+  background-image: url("./img/bgImg/bgimg16.png");
   background-position: center;
   background-size: cover;
 }
