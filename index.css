@@ -1009,7 +1009,7 @@ html, body {
   }
 }
 .resume .project-title p {
-  color: black;
+  color: #fff;
 }
 .resume hr {
   margin-top: 20px;
@@ -1109,7 +1109,7 @@ html, body {
 .resume .swiper-slide .swiperWord1 p {
   color: white;
   padding: 16px;
-  font-size: 16px;
+  font-size: 22px;
 }
 .resume .swiper-slide .swiperWord1 a {
   font-size: 20px;
