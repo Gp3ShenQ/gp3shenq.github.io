@@ -519,6 +519,7 @@ html, body {
   .resume .aboutBox .aboutCenter .aboutLeft {
     width: 50%;
     margin-left: 25%;
+    margin-top: -10%;
   }
 }
 .resume .aboutBox .aboutCenter .aboutLeft img {
@@ -626,7 +627,7 @@ html, body {
 @media screen and (max-width: 576px) {
   .resume .aboutBox .aboutCenter .aboutRight .CV p {
     font-size: 22px;
-    padding-left: 20px;
+    padding-left: 5px;
   }
 }
 .resume .aboutBox .aboutCenter .aboutRight .CV hr {
@@ -1029,6 +1030,16 @@ html, body {
     height: 550px;
   }
 }
+.resume a {
+  color: #000;
+  -webkit-text-decoration: auto;
+          text-decoration: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.resume a:hover {
+  color: orange;
+}
 .resume .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -1110,18 +1121,6 @@ html, body {
   color: white;
   padding: 16px;
   font-size: 22px;
-}
-.resume .swiper-slide .swiperWord1 a {
-  font-size: 20px;
-  position: absolute;
-  color: #ecc7c7;
-  right: 2%;
-  bottom: 5%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.resume .swiper-slide .swiperWord1 a:hover {
-  color: #463d3d;
 }
 
 .ProfessionalBox {
