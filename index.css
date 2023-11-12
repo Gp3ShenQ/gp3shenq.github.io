@@ -43,6 +43,33 @@ html, body {
   font-family: "Jost", sans-serif;
 }
 
+.font5 {
+  font-family: "Indie Flower";
+}
+
+@-webkit-keyframes pojGO {
+  0% {
+    right: 30px;
+  }
+  50% {
+    right: 50px;
+  }
+  100% {
+    right: 30px;
+  }
+}
+
+@keyframes pojGO {
+  0% {
+    right: 30px;
+  }
+  50% {
+    right: 50px;
+  }
+  100% {
+    right: 30px;
+  }
+}
 .naveBar {
   position: fixed;
   display: -webkit-box;
@@ -1038,7 +1065,7 @@ html, body {
   transition: all 0.3s;
 }
 .resume a:hover {
-  color: orange;
+  color: yellow;
 }
 .resume .swiper-slide {
   background-position: center;
@@ -1121,6 +1148,13 @@ html, body {
   color: white;
   padding: 16px;
   font-size: 22px;
+}
+.resume .swiper-slide .swiperWord1 span {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  -webkit-animation: pojGO 1s infinite;
+          animation: pojGO 1s infinite;
 }
 
 .ProfessionalBox {

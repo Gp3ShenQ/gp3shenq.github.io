@@ -35,6 +35,17 @@ html,body
 .font4
   font-family: 'Jost', sans-serif
 
+.font5
+  font-family: "Indie Flower"
+
+@keyframes pojGO
+  0%
+    right: 30px 
+  50%
+    right: 50px 
+  100%
+    right: 30px
+
 .naveBar
   position: fixed
   display: flex
@@ -608,7 +619,7 @@ html,body
     text-decoration: auto
     transition: all .3s
     &:hover
-        color: orange
+        color: yellow
 
   .swiper-slide
     background-position: center
@@ -667,15 +678,11 @@ html,body
         color: white
         padding: 16px
         font-size: 22px
-      // a 
-      //   font-size: 20px
-      //   position: absolute
-      //   color: #ecc7c7
-      //   right: 2%
-      //   bottom: 5%
-      //   transition: .5s
-      //   &:hover
-      //     color: #463d3d
+      span
+        position: absolute
+        right: 30px
+        bottom: 20px
+        animation: pojGO 1s infinite
 
 .ProfessionalBox
   width: 100%
