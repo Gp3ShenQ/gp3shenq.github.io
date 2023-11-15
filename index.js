@@ -19,13 +19,13 @@ function anchor(el){
 })
 }
 anchor('.word')
+    ///點擊按鈕後定位
 
 
   if($(window).scrollTop() >= 499){
     $(".indexCenter").css("display" , "none")
     $(".cloud").css("display" , "none")
   }
-
 $(window).on('scroll',function(){
   const top = $(window).scrollTop()
   if(top == 0){

@@ -303,6 +303,12 @@ html, body {
   -webkit-animation: move 18s infinite;
           animation: move 18s infinite;
 }
+@media screen and (max-width: 1024px) {
+  .resume .bgImg .cloud .cloud1 {
+    -webkit-animation: move 22s infinite;
+            animation: move 22s infinite;
+  }
+}
 .resume .bgImg .cloud .cloud1 .c1-1 {
   -webkit-box-shadow: 1100px -400px 170px 100px #DAD9DF;
           box-shadow: 1100px -400px 170px 100px #DAD9DF;
