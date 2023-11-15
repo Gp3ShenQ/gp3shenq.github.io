@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?o5of4t');
-  src:  url('fonts/icomoon.eot?o5of4t#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o5of4t') format('truetype'),
-    url('fonts/icomoon.woff?o5of4t') format('woff'),
-    url('fonts/icomoon.svg?o5of4t#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?c8pes8');
+  src:  url('fonts/icomoon.eot?c8pes8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?c8pes8') format('truetype'),
+    url('fonts/icomoon.woff?c8pes8') format('woff'),
+    url('fonts/icomoon.svg?c8pes8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,53 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-record:before {
-  content: "\e901";
-}
-.icon-office:before {
-  content: "\e903";
-}
-.icon-phone-hang-up:before {
-  content: "\e943";
-}
 .icon-mobile:before {
   content: "\e958";
 }
-.icon-undo2:before {
-  content: "\e967";
+.icon-user-tie:before {
+  content: "\e976";
 }
-.icon-redo2:before {
-  content: "\e968";
-}
-.icon-forward:before {
-  content: "\e969";
-}
-.icon-reply:before {
-  content: "\e96a";
-}
-.icon-bubbles3:before {
-  content: "\e96f";
-}
-.icon-play3:before {
-  content: "\ea1c";
-}
-.icon-pause2:before {
-  content: "\ea1d";
-}
-.icon-circle-up:before {
-  content: "\ea41";
-}
-.icon-circle-right:before {
-  content: "\ea42";
-}
-.icon-circle-down:before {
-  content: "\ea43";
-}
-.icon-circle-left:before {
-  content: "\ea44";
-}
-.icon-mail2:before {
-  content: "\ea84";
+.icon-ctrl:before {
+  content: "\ea50";
 }
 .icon-mail4:before {
   content: "\ea86";
@@ -79,24 +40,6 @@
 .icon-facebook21:before {
   content: "\ea93";
 }
-.icon-instagram1:before {
-  content: "\ea94";
-}
-.icon-whatsapp:before {
-  content: "\ea95";
-}
-.icon-spotify:before {
-  content: "\ea96";
-}
-.icon-telegram:before {
-  content: "\ea98";
-}
-.icon-twitter1:before {
-  content: "\ea97";
-}
-.icon-youtube2:before {
-  content: "\ea9e";
-}
-.icon-media-record:before {
-  content: "\e900";
+.icon-IE:before {
+  content: "\eadb";
 }
