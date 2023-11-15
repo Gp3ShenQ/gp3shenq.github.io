@@ -1,129 +1,220 @@
 AOS.init();
-   ///計算背景遮罩顏色
-function opacityControl(){
-  let opacity = $(window).scrollTop()/3500;
-  $('.mask').css("opacity",`${opacity}`)
-}
-$(window).on('scroll',function(){
-  opacityControl()
-  })
-opacityControl()
 
-
-
-
-      //點擊按鈕後定位
-$(".aboutMe").on("click",function(){
-  $('html,body').animate({scrollTop:890}, 100)
-})
-$(".naveWork").on("click",function(){
-  $('html,body').animate({scrollTop:1769}, 100)
-})
-$(".navePoj").on("click",function(){
-  $('html,body').animate({scrollTop:2550}, 100)
-})
-$(".naveProfessional").on("click",function(){
-  $('html,body').animate({scrollTop:3500}, 100)
-})
-
-
-  if($(window).scrollTop() >= 499){
-    $(".indexCenter").css("display" , "none")
-    $(".cloud").css("display" , "none")
-  }
-
-$(window).on('scroll',function(){
-  const top = $(window).scrollTop()
-  if(top == 0){
-    $(".naveBgc").css("top","-70px")
-    $(".name").css("color","white")
-    $(".word").css("color","white")
-    $(".bottomArrow").css("display" , "block")
-  }else if(top >= 100 && top <= 499){
-    $(".right1,.right2,.right3,.right4").css("right" , "-110px")
-    $(".cloud").css("display" , "block")
-    $(".rightBar").css("display" , "none")
-    $(".indexCenter").css("display" , "block")
-  }else if(top >= 500 && top <= 1249){
-    $(".right1").css("right" , "-15px")
-    $(".right2,.right3,.right4").css("right" , "-110px")
-    $(".cloud").css("display" , "none")
-    $(".rightBar").css("display" , "block")
-    $(".indexCenter").css("display" , "none")
-  }else if(top >= 1250 && top <= 2177){
-    $(".right2").css("right" , "-11px")
-    $(".right1,.right3,.right4").css("right" , "-110px")
-  }else if(top >= 2178 && top <= 2877){
-    $(".right3").css("right" , "-28px")
-    $(".right1,.right2,.right4").css("right" , "-110px")
-  }else if(top >= 2876 && top <= 3500){
-    $(".right1,.right2,.right3 ").css("right" , "-110px")
-    $(".right4").css("right" , "-2px")
-  }else{
-    $(".naveBgc").css("top","0")
-    $(".name").css("color","black")
-    $(".word").css("color","black")
-    $(".bottomArrow").css("display" , "none")
-  }
-})
-
-
-$(".work1").on("mouseenter",function(){
-  const index = $(this).index()
-  $('.experience .goodByelight').eq(index -1).addClass("light")
-})
-$(".work1").on("mouseleave",function(){
-  const index = $(this).index()
-  $(".goodByelight").removeClass("light")
-  $('.experience .goodByelight').eq(index -1).addClass("blowlight")
-  setTimeout(function(){$(".blowlight").removeClass("blowlight")},1000)
-})
-$(".school").on("mouseenter",function(){
-  const index = $(this).index()
-  $('.schoolBox .goodByelight').eq(index).addClass("light")
-})
-$(".school").on("mouseleave",function(){
-  const index = $(this).index()
-  $(".goodByelight").removeClass("light")
-  $('.schoolBox .goodByelight').eq(index).addClass("blowlight")
-  setTimeout(function(){$(".blowlight").removeClass("blowlight")},1000)
-})
-
-
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
+// ------- innerpage
+var swiper = new Swiper(".innerSwiper", {
+  spaceBetween: 0,
   centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 500,
-    modifier: 1,
-    slideShadows: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
   },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
+  loop: true
 });
 
-function addpercen(){
-  $(".percentage").each((index,el)=>{el.number = 0})
-  $(window).on("scroll",function(){
-    if($(window).scrollTop() >= 3100){
-      $(".percentage").each((index,el)=>{
-        const data = $(el).attr('data')
-        $(el).siblings(".circle-inner").css("width",data+"%")
-        const timer = setInterval(()=>{
-          if(el.number < data){
-            el.number += 1
-            $(el).text(el.number+"%")
-          }else{
-            clearInterval(timer)
-          }
-        },10)
-      })
+// -----------
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".lArrow ",
+    prevEl: ".rArrow ",
+  },
+  loop: true
+});
+
+
+
+let beforeTop;
+let direction;
+$(window).on('scroll',()=>{
+  const top = $(window).scrollTop();
+  console.log(top);
+  if(top!=0 || $(".point").hasClass("change"))
+    $(".navbar").addClass("bgcwhite")
+  else
+  $(".navbar").removeClass("bgcwhite")
+
+  if(beforeTop < $(window).scrollTop()){
+    //往下滾
+      direction = true
+    }else {
+    //往上滾
+      direction = false
     }
-  })
+  setTimeout(()=>{
+    beforeTop = $(window).scrollTop()
+  },100)
+})
+
+//-----往上下須要動作
+if(direction){
+
 }
-addpercen()
+
+// if($("body").hasClass("innerPage")){
+//   $(".navbar").addClass("bgcbrown")
+// }else{
+//   $(".navbar").removeClass("bgcbrown")
+// }
+
+$(".point").on('click',function(){
+  if($(".point").hasClass("change")){
+    $(".point").removeClass("change")
+    $('.box').fadeIn(1000)
+    $(".innerPage").fadeOut(300)
+    $('html,body').animate({scrollTop:0}, 100)
+    $('footer').fadeIn(1000)
+  }else{
+  $(".point").addClass("change")
+  $('.box').fadeOut(900)
+  $(".innerPage").fadeIn(1000)
+  $('footer').fadeOut(900)
+  about()
+}
+})
+
+$(".aboutMe").on('click',function(){
+  about()
+})
+function about(){
+    $(".aboutBox").show()
+    $(".projectBox").hide()
+    $(".serviceBox").hide()
+}
+
+$(".project").on('click',function(){
+  $(".aboutBox").hide()
+  $(".projectBox").show()
+  $(".serviceBox").hide()
+})
+
+$(".service").on('click',function(){
+  $(".aboutBox").hide()
+  $(".projectBox").hide()
+  $(".serviceBox").show()
+})
+
+  //------- 隱藏page function
+function pageNone(){
+  $(".pageBox1").css("display","none")
+  $(".pageBox2").css("display","none")
+  $(".pageBox3").css("display","none")
+  $(".pageBox4").css("display","none")
+}
+
+
+let display;
+
+function detectDisplay(){
+  if($(window).scrollTop() >= 1700 && $(window).scrollTop() <= 2300){
+    if(display) return
+    $('main').attr('theme','1800')
+    $(".mask").css("display"," block")
+    display = true;
+  }
+  else if($(window).scrollTop() <= 1700){
+    $('main').attr('theme','1799')
+    $(".bg1,.bg4,.bg3,.bg2").css("width","25%")
+    $(".back").css("display","none")
+    $(".mask").css("display","none")
+    pageNone()
+    display = false;
+  }else if($(window).scrollTop() >= 2600){
+    // $('main').attr('theme','1799')
+    $(".bg1,.bg4,.bg3,.bg2").css("width","25%")
+    $(".back").css("display","none")
+    $(".mask").css("display","block")
+    pageNone()
+    // display = false;
+  }}
+
+  // if($(window).scrollTop() < 1800 && display){
+
+// 進入網頁後先執行一次
+if($(window).scrollTop() >= 1800){
+  $('main').attr('theme','1800')
+  display = true;
+}else if($(window).scrollTop() < 1800){
+  $('main').attr('theme','1799')
+  $(".bg1,.bg4,.bg3,.bg2").css("width","25%")
+  display = false;
+}else if($(window).scrollTop() >= 2500){
+  $('.mask').css("display","none")
+  pageNone()
+}
+
+//運算opacity的scroll的位子來變色
+function opacityControl(){
+  let blockTop = $('.innerStyle').offset().top - 300;
+  let winHeight = window.innerHeight * 2 / 3;
+  let opacity = 1 - ($(window).scrollTop() - blockTop)/winHeight > 0.6? 0.6:1 - ($(window).scrollTop() - blockTop)/winHeight;
+  if($(window).scrollTop() > blockTop){
+    console.log(opacity)
+    opacity = 1 - ($(window).scrollTop() - blockTop)/winHeight > 0.6? 0.6:1 - ($(window).scrollTop() - blockTop)/winHeight;
+    $('.mask').css("background-color",`rgba(0,0,0,${opacity}`)
+  }
+}
+//運算opacity的scroll的位子來變色
+
+//-----卷軸位置1800顯現
+$(window).on('scroll',function(){
+  detectDisplay()
+  // opacityControl()
+})
+// $(window).on('scroll',function(){
+//   if($(window).scrollTop() >= 1800){
+//     $('mian').addClass('')
+
+//   }else if($(window).scrollTop() < 1800){
+//     $('mian').removeClass('')
+
+//   }
+// })
+//-----卷軸位置1800顯現
+
+///-----點擊後背景圖展開
+
+$(".word1").on("click",function(){
+  $(".bg4,.bg3,.bg2").css("width","0")
+  $(".bg1").css("width","100%")
+  $(".pageBox1").css("display","block")
+})
+
+$(".word2").on("click",function(){
+  $(".bg1,.bg4,.bg3").css("width","0")
+  $(".bg2").css("width","100%")
+  $(".pageBox2").css("display","block")
+})
+
+$(".word3").on("click",function(){
+  $(".bg1,.bg4,.bg2").css("width","0")
+  $(".bg3").css("width","100%")
+  $(".pageBox3").css("display","block")
+})
+
+$(".word4").on("click",function(){
+  $(".bg1,.bg3,.bg2").css("width","0")
+  $(".bg4").css("width","100%")
+  $(".pageBox4").css("display","block")
+})
+
+$(".word1,.word2,.word3,.word4").on("click",function(){
+  $(".mask").css("display","none")
+  $(".back").css("display","block")
+})
+
+$(".back").on("click",function(){
+  blockEvent()
+})
+function blockEvent(){
+  $(".bg1,.bg4,.bg3,.bg2").css("width","25%")
+  $(".back").css("display","none")
+  $(".pageBox1").css("display","none")
+  $(".pageBox2").css("display","none")
+  $(".pageBox3").css("display","none")
+  $(".pageBox4").css("display","none")
+  $(".mask").css("display","block")
+  
+}
+///-----點擊後背景圖展開
+
+

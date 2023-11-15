@@ -5,261 +5,434 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caveat:wght@400;500;600;700&family=Indie+Flower&family=Jost:ital,wght@0,200;0,700;1,300;1,500&family=Klee+One&family=Lexend:wght@100&family=Ma+Shan+Zheng&family=Mochiy+Pop+P+One&family=Mooli&family=Reggae+One&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,700;1,300;1,500&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="./index.css")
         link(rel="stylesheet", href="./iconmoon/style.css")
         link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
         script(src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous")
         script(defer src="./index.js") 
-        link(rel="stylesheet", href="./index.css")
-        title ShenResume
+        title ShenQ 室內設計
         link(rel="shortcut icon", href="./img/Mark/16Mark.png")
         link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
         meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
         script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css")
         script(src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js")
-    body
-        nav.naveBar
-            .naveBgc
-            .naveMark
-                .mark
-                    img(src="./img/Mark/50Mark.png", alt="")
-                .name.enfont
-                    p Shih-Lin Shen
-            .introduce
-                .word.aboutMe
-                    p AboutMe 
-                .word.naveWork
-                    p Experience
-                .word.navePoj 
-                    p Project
-                .word.naveProfessional
-                    p Professional
+    body 
+      nav.navbar 
+        .markBox 
+          .mark 
+            img(src="./img/Mark/50Mark.png", alt="")
+          .markWordBox 
+            .topWord 
+              p The design that is most in harmony
+            .bottomWord 
+              p with nature
+        .settingBox 
+          .leftSet
+            .buyCar 
+            .search
+            .language
+          .rightSet 
+            .point 
+              .po.point1 
+              .po.point2 
+              .po.point3 
+              .po.point4 
+              .po.point5 
+              .po.point6 
+              .po.point7 
+              .po.point8 
+              .po.point9 
 
-        main.resume 
-            .rightBar.enfont
-                .right-about 
-                    .wor.right1
-                        p About Me
-                    .point.right1-1
-                .right-experience
-                    .wor.right2
-                        p Experience
-                    .point.right1-2
-                .right-project 
-                    .wor.right3
-                        p Project 
-                    .point.right1-3
-                .right-professional 
-                    .wor.right4
-                        p Professional 
-                    .point.right1-4
-            .bgImg 
-                .bottomArrow
-                    .icon-ctrl
-                .mask
-                .cloud 
-                    .cloud1 
-                        .c1-1.cloud100
-                        .c1-2.cloud100
-                    .cloud2
-                        .c2-1.cloud100
-                        .c2-2.cloud100
-                .indexCenter.font2
-                    .indexTop 
-                        span H
-                        span i
-                        span !
-                        span &nbsp;&nbsp;&nbsp;
-                        span I'
-                        span m
-
-                    .indexMid
-                        span S
-                        span h
-                        span i
-                        span h
-                        span -
-                        span L
-                        span i
-                        span n
-                        span &nbsp;&nbsp;
-                        span S
-                        span h
-                        span e
-                        span n
+      .innerPage 
+        .pageBox
+          .innerLeft
+            .swiper.innerSwiper
+              .swiper-wrapper
+                .swiper-slide 
+                  img(src="./img/Innerpage/inner1.jpg", alt="")
+                .swiper-slide 
+                  img(src="./img/Innerpage/inner2.jpg", alt="")
+                .swiper-slide 
+                  img(src="./img/Innerpage/inner3.jpg", alt="")
+                .swiper-slide 
+                  img(src="./img/Innerpage/inner4.jpg", alt="")
+                .swiper-slide 
+                  img(src="./img/Innerpage/inner5.jpg", alt="")
+          .innerRight
+            .topBox 
+              .in.aboutMe 
+                p 關於ShenQ
+              .in.project
+                p 設計作品
+              .in.service
+                p 服務流程
             .aboutBox 
-                .aboutCenter
-                    .aboutLeft
-                        img(src="./img/pic/pic.png", alt="")
-                    .aboutRight
-                        .name(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100")
-                            .icon-user-tie
-                            h1.font1 姓名:
-                            h2.font1 沈仕霖 
-                                span.font4 (Shih-Lin Shen)
-                        .phone(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100")
-                            .icon-mobile
-                            h1.font1 電話:
-                            h2.font4 0963-656-380
-                        .mail(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100")
-                            .icon-mail4
-                            h1.font1 信箱 :
-                            h2.font4 gp3g4xup6@gmail.com
-                        .internet(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="100")
-                            .icon-IE
-                            h1.font4 網站:
-                            a(href="https://gp3shenq.github.io/" target= "_blank") https://gp3shenQ.github.io/
-                        .CV(data-aos="fade-up" data-aos-anchor-placement="top-bottom")
-                            p.font1 簡歷
-                            hr
-                            h2.font1 &emsp;&emsp;於就學期間，發現自己對於資訊管理、科技等相關領域有所興趣，便開啟了學習的旅程，原以為畢業後能迅速投入自己所學的熱愛產業，但因私人因素與行業環境變化等原因，被迫暫時遠離此領域。
-                            h2.font1 &emsp;&emsp;近年因一場全球性的貿易戰爭，許多企業受到影響並陸續開始實施無薪假，讓我重新思考未來的人生方向，經謹慎思考後，決議重新投回資訊產業前端開發的擁抱，於日常生活中我樂於觀察各前端網站設計風格、型態，並利用下班後的閒暇時間，翻閱相關書籍與實踐，除讓我克服了陌生感也同時讓我找回了熟悉的事物，並建立了一系列的網頁作品集。
-                            h2.font1 &emsp;&emsp;我熱愛挑戰自我，並時時嚴以律己，我相信唯有透過不斷學習與實踐並將所學應用於實際項目中，才能有所成長與突破，期盼於未來能將我所學之技能貢獻於團隊中，並與各同仁們一起相互切磋、互助、互長，完成勝任各專案。
-            .experience
-                .workBottom(data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0")
-                    .workTime
-                        .line100
-                            .point.position0
-                                .goodByelight
-                            .point.position33
-                                .goodByelight
-                            .point.position66 
-                                .goodByelight
-                            .point.position99
-                                .goodByelight
-                        .workArea
-                            .word-top
-                                p Job Experience
-                                hr
-                            .work1.font(data-aos="zoom-out-right")
-                                h1 鏟花技師
-                                h4 宇漢機械刮花有限公司
-                                h4 精密儀器製造工及修理
-                                h4 任職時間 : 
-                                h4 &emsp;&emsp;2016/3 - 2023/9
-                            .work1.font(data-aos="zoom-out-left")
-                                h1 主廚
-                                h4 創業-拉麵店(義番町)
-                                h4 主廚／店員／餐點規劃與設計/採買
-                                h4 任職時間 : 
-                                h4 &emsp;&emsp;2014/5 - 2016/1
-                            .work1.font(data-aos="zoom-out-right")
-                                h1 值班襄理
-                                h4 十二鍋
-                                h4 內區餐點製作/外區顧客服務
-                                h4 任職時間 : 
-                                h4 &emsp;&emsp;2011/10 - 2013/3
-                            .work1.font(data-aos="zoom-out-left")
-                                h1 儲備幹部
-                                h4 Battis意式風味小館
-                                h4 餐廚助手／飲品調配
-                                h4 任職時間 : 
-                                h4 &emsp;&emsp;2006/3 - 2010/10
-                    .schoolBox
-                        .line200
-                            .point.position01
-                                .goodByelight
-                            .point.position100
-                                .goodByelight
-                        .schoolArea
-                            .schoolTop
-                                p Education
-                                hr
-                            .schoolWord
-                                .school.font(data-aos="zoom-out-right")
-                                    h1 嶺東科技大學
-                                    h4 行銷與流通業管理 / 二技畢業
-                                    h4 就讀時間 : 
-                                    h4 2008/9 - 2011/6
-                                .school.font(data-aos="zoom-out-right")
-                                    h1 嶺東科技大學
-                                    h4 資訊管理學系 / 五專畢業
-                                    h4 就讀時間 : 
-                                    h4 2003/9 - 2008/6
+              .bgcolor 
+                .about 
+                  p 從「心」創造生活中的慢活風景。
+                  hr
+                  p 自然貼近屋主原有的生活模式、
+                  p 打造人們交流共生的美好居所。
+              .aboutMap
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.4379842023313!2d120.68611587432879!3d24.156367778395595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d60abf2a08f%3A0x7fce299a07880444!2zNDA05Y-w5Lit5biC5YyX5Y2A5LiJ5rCR6Lev5LiJ5q61MzAy6Jmf!5e0!3m2!1szh-TW!2stw!4v1693140793482!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+                
+              .fb-box 
+                    .fb
+                        .fb-shadow
+                        .fb-top 
+                            .fbimg 
+                            .fbword
+                                .fbtitle 
+                                    p ShenQ設計
+                                .fbfans 
+                                    p 2,014,280位追蹤者
+                        .fb-bottom 
+                            .fb-bbox
+                                .flicon 
+                                    .icon-facebook21
+                                .fb-flword 
+                                    p 追蹤粉絲專頁
+                            .fb-sbox 
+                                .sicon 
+                                    .icon-redo2
+                                .fb-sword
+                                    p 分享
+            .projectBox 
+              .innerPj1(data-aos="fade-right" data-aos-duration="1500")
+                .pjImg1
+                  img(src="./img/Innerpage/pj1.jpg", alt="")
+                .pjWord1
+                  h2 春日絮語
+                  p 靜聽時光絮語沉浸溫馨北歐風
+              .innerPj2(data-aos="fade-left" data-aos-duration="1500")
+                .pjWord2
+                  h2 田野
+                  p 家中蔓延到心底的沉靜溫馨鄉村風
+                .pjImg2
+                  img(src="./img/Innerpage/pj2.jpg", alt="")
+              .innerPj3(data-aos="fade-rihgt" data-aos-duration="1500")
+                .pjImg3
+                  img(src="./img/Innerpage/pj3.jpg", alt="")
+                .pjWord3
+                  h2 柔光旖旎
+                  p 用愛治癒內心的溫柔奶油色空間
+            .serviceBox
+              .inBox
+                .firBox
+                  .inner.Sv1 
+                    .topW1
+                      h2 1.預約溝通
+                    .dowW1
+                      p 服務流程說明
+                      p 瞭解屋主需求
+                      p 預約丈量時間
+                  .icon-circle-right
+                  .inner.Sv2 
+                    .topW2
+                      h2 2.現場勘量
+                    .dowW2
+                      p 尺寸丈量
+                      p 場勘紀錄
+                      p 空間需求細節討論
+                      p 生活居住習慣訪談
+                      p 喜好風格討論
+                    .icon-circle-down
+                .senBox
+                  .inner.Sv4 
+                    .topW4
+                      h2 4.二次提案
+                    .dowW4
+                      p 設計圖冊詳細說明
+                      p 最終建材、材質確認
+                      p 工程預算與期程解說
+                      p 合約解說與簽訂
+                      .icon-circle-down
+                  .icon-circle-left
+                  .inner.Sv3 
+                    .topW3
+                      h2 3.初次提案
+                    .dowW3
+                      p 設計圖面配置
+                      p 部分空間3D渲染圖
+                      p 工程概況預算
+                      p 材質、設備建議
+                      p 預付訂金設計微調
+                .therBox
+                  .inner.Sv5 
+                    .topW5
+                      h2 5.工程施作
+                    .dowW5
+                      p 專案工程師監工
+                      p 施作期程、現場管理
+                      p 定期回報進度
+                      p 階段工程付款
+                  .icon-circle-right
+                  .inner.Sv6 
+                    .topW6
+                      h2 6.完工驗收
+                    .dowW6
+                      p 驗收交屋
+                      p 裝潢尾款
+                      p 售後保固服務
 
-            .projectBox
-                .project-title(data-aos="fade-up" data-aos-anchor-placement="top-center")
-                    p.font2 Project
-                    hr
-                .swiper.mySwiper
-                    .swiper-wrapper
-                        .swiper-slide
-                            a(href="https://gp3shenq.github.io/paper/" target="_blank")
-                                img(src="./img/poj/poj.png", alt="")
-                                .swiperWord1
-                                    .swiperBox1
-                                        .smallImg 
-                                        .rightPojword.font2
-                                            h1 紙雕
-                                    p &emsp;&emsp;關於紙雕名人與文化介紹。
-                                    span.font5 Click GO 
-                        .swiper-slide
-                            a(href="https://gp3shenq.github.io/ShenQHouse/" target="_blank")            
-                                img(src="./img/poj/poj1.png", alt="")
-                                .swiperWord1
-                                    .swiperBox1
-                                        .smallImg 
-                                        .rightPojword.font2
-                                            h1 ShenQ空間設計
-                                    p &emsp;&emsp;家中裝潢時，研究了一些各式裝潢風格，整理了一些喜歡的風格照片，製作成簡易網站。&emsp;&emsp;(持續更新)
-                                    span.font5 Click GO 
-                        .swiper-slide
-                            a(href="https://gp3shenq.github.io/iphone/" target="_blank") 
-                                img(src="./img/poj/poj4.png", alt="")
-                                .swiperWord1
-                                    .swiperBox1
-                                        .smallImg 
-                                        .rightPojword.font2
-                                            h1 3D手機
-                                    p &emsp;&emsp;3D手機旋轉，新增訊息與刪除訊息功能，整支手機換色。
-                                    span.font5 Click GO 
-                        .swiper-slide
-                            a(href="https://gp3shenq.github.io/sumcake/" target="_blank") 
-                                img(src="./img/poj/poj2.png", alt="")
-                                .swiperWord1
-                                    .swiperBox1
-                                        .smallImg 
-                                        .rightPojword.font2
-                                            h1 豐味堂
-                                    p &emsp;&emsp;幫家裡在經營的食品店，做一個簡易網站。&emsp;&emsp;(持續更新)
-                                    span.font5 Click GO 
-                        .swiper-slide
-                            a(href="https://gp3shenq.github.io/UmaCat/" target="_blank") 
-                                img(src="./img/poj/poj3.png", alt="")
-                                .swiperWord1
-                                    .swiperBox1
-                                        .smallImg 
-                                        .rightPojword.font2
-                                            h1 貓咪生活紀錄
-                                    p &emsp;&emsp;記錄家中三隻貓咪的生活。&emsp;&emsp;(持續更新)
-                                    span.font5 Click GO 
+      main.box(theme="1800")
+        .styleBox 
+          .styleBgimg
+            .styleBg 
+              .bg1 
+              .bg2 
+              .bg3 
+              .bg4 
 
-        .ProfessionalBox
-            .Professional-title(data-aos="fade-up" data-aos-anchor-placement="top-center")
-                p Professional 
-                hr  
-            .professionalBox
-                .pro-title
-                    p Web Development
-                .circle-box
-                    .circle-area
-                        .circle-outside
-                            .circle-text
-                                p Html5 
-                            .circle-inner 
-                            .percentage(data="80")
-                        .circle-outside
-                            .circle-text
-                                p CSS3 
-                            .circle-inner 
-                            .percentage(data="80")
-                        .circle-outside 
-                            .circle-text
-                                p JavaScript 
-                            .circle-inner 
-                            .percentage(data="70")
-                        .circle-inner-text
-                            p Basics:&emsp;RWD 
-                            p Styling:&emsp;Pug || Sass || jQuery
-                            p Building tools:&emsp;Vue.js
+        .indexBox
+          .leftArea
+            .worBox 
+              .mark1 
+                img(src="./img/Mark/ShenQMark1.png", alt="")
+              .word-1(data-aos="fade-right" data-aos-duration="3000")
+                p Clear Color Palette Style
+                p close to Natural
+              .word-3(data-aos="fade-left" data-aos-duration="3000")
+                p Close to mild wooden tones, using European standard green building materials...
+              .word-4
+                .arrow
+                p Other various design styles.
+          .rightArea    
+            .indImg 
+        .bottomBox
+          .leftBottom
+            .colorBtt
+              .leftBox 
+                .word.app 
+                  p APPLICATION
+                .word.pro
+                  p PRODUCTS
+                .word.esg 
+                  p ESG
+                .word.other
+                  .point.p1
+                  .point.p2
+                  .point.p3
+
+          .rightBottom 
+            .date 
+              .day 
+                p 27
+              .year
+                p 2023 . 08
+            .introduction
+              .swiper.mySwiper
+                .swiper-wrapper
+                  .swiper-slide 
+                    .intTop 
+                      p Nordic Wood Style
+                    .intBot
+                      p Simple pairing, curved ceilings create a softer visual effect...
+                  .swiper-slide 
+                    .intTop 
+                      p Norwegian style
+                    .intBot
+                      p Norwegian icy landscapes, the comfort of snowy white.
+                  .swiper-slide 
+                    .intTop 
+                      p Dutch style
+                    .intBot
+                      p The local red and blue contrasting colors of the Netherlands, along with the enthusiastic local style.
+                  .swiper-slide 
+                    .intTop 
+                      p Japanese Wooden Style
+                    .intBot
+                      p Vintage Japanese wooden style, with a touch of tranquility and peace.
+            .inArrow
+              .lArrow 
+              .rArrow 
+
+        .senBox   
+          .imgBox 
+            
+          .wordBox
+            .topImg
+              .Img1(data-aos="fade-left" data-aos-duration="1500")
+                img(src="./img/aosimg1.jpg", alt="") 
+              .Img2(data-aos="fade-down" data-aos-duration="1500")
+                img(src="./img/aosimg2.jpg", alt="")
+            .wArea
+              .colorBox1
+              .colorBox2
+              .inWord
+                .topW
+                  p Simplicity in pure white
+                .innerW 
+                  p Warm and Cozy White Family Style
+
+        .innerStyle 
+          .mask.word1
+            .wor.w1
+              p 美式鄉村
+          .mask.word2
+            .wor.w2
+              p 工業
+          .mask.word3
+            .wor.w3
+              p 日式侘寂
+          .mask.word4
+            .wor.w4
+              p 奢華
+          .back
+            .icon-undo2
+              .goBack 
+                p Back
+          .pageBox1 
+            .page1 
+              .page1-1
+                img(src="./img/pic/page1/page2.jpg", alt="")
+              .word1-1
+                p 美式鄉村風格，又被稱為美式農舍風格，是一種追求純樸、自然、溫馨的室內設計風格，強調對大自然的親近感以及對過去的敬仰。這種風格常常帶有懷舊情懷，將傳統的農舍元素和現代的舒適融合，營造出一種質樸卻不失精緻的室內空間。
+            .page2
+              .word2-1
+                p 自然色彩：美式鄉村風格的色彩偏向於柔和、自然的調性，如淡雅的米白、米黃、淺綠、淺藍等。這些色彩能夠帶來寧靜、舒適的感覺，讓人感受到大自然的和諧氛圍。
+                p 木材元素：這種風格非常注重木材的運用，包括粗糙的木質地板、暗色調的實木家具以及木製的梁柱。木材質感能夠為空間增添溫暖感，也強調了質樸的特點。
+                p 花紋與紋理：圖案和紋理的使用是美式鄉村風格的一個重要元素，例如簡單的花卉圖案、格子、方塊等。這些紋理能夠為空間增加豐富的層次感，同時也帶來了一份輕松、隨意的感覺。
+                p 古董與經典家具：在美式鄉村風格中，古董家具和經典的家具設計佔有重要地位。這些家具常常是精心挑選的，能夠為室內空間增添歷史感和個性。
+              .page2-1
+                img(src="./img/pic/page1/page1.jpg", alt="")
+          .pageBox2
+            .page21
+              .page21-1
+                img(src="./img/pic/page2/page12.jpg", alt="")
+              .word21-1
+                p 工業風格室內設計，是一種源於工業建築和工業設計的室內設計風格，以其粗糙、實用、原始的特點而聞名。這種風格常常將工業場所的元素引入室內，如鋼鐵、混凝土、裸露的管道和木材，創造出一種粗糙、質樸且具有現代感的氛圍。
+            .page22
+              .word22-1
+                p 原始的材質：工業風格強調使用原始的、粗糙的材質，如鋼鐵、混凝土、磨砂玻璃、暴露的磚牆等。這些材質常常不經過過多處理，保留其天然的質感。
+                p 裸露的管道和結構：工業風格常將管道、樑柱、鋼架等結構元素裸露出來，不隱藏在牆壁或天花板後面。這些元素成為室內空間的一部分，增加了質樸和真實感。
+                p 暗色調：工業風格通常選用深色調，如灰色、黑色、深褐色等，以營造出沉穩、內斂的氛圍。這些顏色與原始材質相輔相成，營造出強烈的對比。
+                p 簡約的家具：家具設計通常簡潔、功能性強大，常使用金屬、皮革和木材等材質。椅子、桌子和燈具常常具有簡約的線條和現代感。
+                p 工業照明：特殊的照明設計是工業風格的一個亮點。裸露的燈泡、網狀燈罩、工業風吊燈等都是常見的照明元素，它們常常成為室內的焦點。
+              .page22-1
+                img(src="./img/pic/page2/page11.jpg", alt="")
+          .pageBox3 
+            .page31
+              .page31-1
+                img(src="./img/pic/page3/page22.jpg", alt="")
+              .word31-1
+                p 侘寂風格，又被稱為簡約、質樸、寂靜的室內設計風格，源於日本的傳統美學觀念。這種風格強調精簡、自然、平靜，通過簡單的設計和極簡主義的元素，打造出一個充滿和諧、寧靜的生活空間。
+            .page32
+              .word32-1
+                p 簡約而質樸的設計：侘寂風格選擇精簡的設計，並將其降至最基本的形式。這種風格拒絕過多的裝飾和多餘的物品，強調回歸基本，融入自然之美。
+                p 中性的色彩調：侘寂風格常使用中性的色調，如白色、淺灰色、米色和淺木色。這些色彩有助於創造出一種純淨、平和的氛圍。
+                p 自然材質：木材、石頭、麻布、稻草和紙張等自然材質在侘寂風格中得到廣泛使用。這些材質展現了自然界的質樸之美，並帶來一種地道的純樸感。
+                p 不規則和簡單的形狀：侘寂風格常使用不規則、簡單的形狀，如粗糙的陶瓷、手工製作的器皿等，以強調手工藝和自然之美。
+                p 光線和空間：良好的自然光線和開放的空間布局是侘寂風格的關鍵元素。大窗戶、光線透過紗簾的柔和效果以及簡潔的佈局有助於營造出平靜和寧靜的感覺。
+              .page32-1
+                img(src="./img/pic/page3/page21.jpg", alt="")
+          .pageBox4 
+            .page41
+              .page41-1
+                img(src="./img/pic/page4/page32.jpg", alt="")
+              .word41-1
+                p 奢華風格，又被稱為奢侈風格或豪華風格，是一種以高雅、精緻和舒適為特點的室內設計風格。這種風格強調品質、細節和高端材料，旨在營造出一種極具奢華感的生活環境。
+            .page42
+              .word42-1
+                p 高品質材料：奢華風格常使用高品質、昂貴的材料，如大理石、黃金、寶石、真皮、絲綢和光滑的木材。這些材料通常經過精細的手工加工，展現出極高的工藝水平。
+                p 華麗的裝飾：奢華風格經常伴隨著華麗的裝飾元素，如精美的樓梯扶手、精雕細琢的家具、華麗的吊燈和富麗堂皇的窗簾。這些裝飾增添了空間的藝術性和奢華感。
+                p 金色和銀色元素：金色和銀色通常是奢華風格的主要色彩，它們賦予空間一種光輝和璀璨的感覺。金色的細節、家具或裝飾品常常是奢華風格的標誌。
+                p 經典家具：奢華風格常使用經典的家具設計，如路易十五式、伊麗莎白風格等。這些家具通常是手工製作的，具有優雅的線條和華麗的紋飾。
+                p 豪華的燈具：奢華風格的燈具常常極具藝術性，如水晶吊燈、黃銅檯燈、大型壁燈等。它們不僅提供光線，還成為空間的精緻裝飾。
+              .page42-1
+                img(src="./img/pic/page4/page31.jpg", alt="")
+          
+        .greenBox 
+          .greenImg
+            p 綠建材
+            .greenPic1(data-aos="fade-left" data-aos-duration="2500")
+            .greenPic2(data-aos="fade-left" data-aos-duration="2500")
+          .greenRight
+            .greenWord
+              h1 再生建材：
+              h3 這類建材是由回收材料製成的，例如再生玻璃、再生木材和再生金屬。它們減少了對原始資源的需求，同時減少了垃圾堆填的數量。
+              br
+              h1 低能源建材：
+              h3 這些建材具有優良的能源效益，如高效隔熱材、高性能窗戶和隔熱材料。它們有助於減少室內外溫度的變化，節省暖通空調能源消耗。
+              br
+              h1 可再生能源建材：
+              h3 包括太陽能板、風力發電機和地源熱泵等，這些建材通常用於實現自給自足或減少對傳統能源的依賴。
+              br
+              h1 綠色屋頂和牆壁：
+              h3 綠色屋頂使用植被覆蓋，有助於節省能源，改善空氣質量，減少雨水排放。綠色牆壁可以提供額外的絕緣，降低溫度變化。
+              br
+              h1 低VOC建材：
+              h3 VOC（揮發性有機化合物）是室內空氣污染的主要來源之一。低VOC建材釋放的有害氣體更少，有助於維持更健康的室內空氣品質。
+              //- br
+              //- h1 可降解建材：
+              //- h3 這些材料在其使用壽命結束後可以分解或回收，減少對土地填埋場的負擔，如生物降解塑料和可降解混凝土。  
+              br
+              h1 可持續木材：
+              h3 這包括來自可持續林業管理的木材，以確保森林的永續性。FSC（森林管理委員會）認證是一個常見的標誌，用於識別可持續來源的木材。  
+              //- br
+              //- h1 節水設備：
+              //- h3 這些建材包括節水淋浴頭、低流量馬桶、節水龍頭等，有助於減少用水量，降低能源和水資源消耗。
+              //- br
+              //- h1 石棉代替材料：
+              //- h3 石棉是有害的建築材料，因其健康風險而受到限制。許多綠色建材被用來替代石棉，如硬質纖維水泥板。
+              br
+              h1 太陽能建材：
+              h3 這包括太陽能板、太陽能屋頂瓦片和太陽能窗戶，這些建材能夠捕捉太陽能並轉化為電力。
+      
+      footer.bottomBox 
+        .bocImg 
+          img(src="./img/pic/bottomBox/pic6.png", alt="")
+          .company
+            .comTop
+              p CONTACTS 
+            .innerCom 
+              p 臺中總公司 SHOW ROOM
+              .icon-mobile
+                p 客服專線 : 0963656380
+              .icon-phone-hang-up
+                p 傳真電話 : 04-6365-6380
+              .icon-mail2
+                p gp3g4xup6@gmail.com
+              .icon-office
+                p 臺中市北區三民路三段302號
+
+          .media
+            .meTop 
+              p SHARE
+            .innerMe
+              .icon.icon-instagram1
+              .icon.icon-facebook21
+              .icon.icon-telegram
+              .icon.icon-spotify
+              .icon.icon-twitter1
+              .icon.icon-whatsapp
+              .icon.icon-mail4
+
+          .fb
+            .linTop
+              p LINKS
+            .fb-box 
+              .fb
+                  .fb-shadow
+                  .fb-top 
+                      .fbimg 
+                      .fbword
+                          .fbtitle 
+                              p ShenQ設計
+                          .fbfans 
+                              p 2,014,280位追蹤者
+                  .fb-bottom 
+                      .fb-bbox
+                          .flicon 
+                              .icon-facebook21
+                          .fb-flword 
+                              p 追蹤粉絲專頁
+                      .fb-sbox 
+                          .sicon 
+                              .icon-redo2
+                          .fb-sword
+                              p 分享
+        .dising
+          p @ShenQ設計 
