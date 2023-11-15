@@ -8,23 +8,17 @@ $(window).on('scroll',function(){
   opacityControl()
   })
 opacityControl()
+    ///計算背景遮罩顏色
 
-
-
-
-      //點擊按鈕後定位
-$(".aboutMe").on("click",function(){
-  $('html,body').animate({scrollTop:890}, 100)
+    ///點擊按鈕後定位
+function anchor(el){
+  $(el).on("click",function(){
+    const target = $(this).attr('target-anchor')
+    const height = $(target).offset().top - 60;
+    window.scrollTo({top: height, behavior: 'smooth'})
 })
-$(".naveWork").on("click",function(){
-  $('html,body').animate({scrollTop:1769}, 100)
-})
-$(".navePoj").on("click",function(){
-  $('html,body').animate({scrollTop:2450}, 100)
-})
-$(".naveProfessional").on("click",function(){
-  $('html,body').animate({scrollTop:3500}, 100)
-})
+}
+anchor('.word')
 
 
   if($(window).scrollTop() >= 499){
@@ -36,8 +30,6 @@ $(window).on('scroll',function(){
   const top = $(window).scrollTop()
   if(top == 0){
     $(".naveBgc").css("top","-70px")
-    // $(".name").css("color","white")
-    // $(".word").css("color","white")
     $(".bottomArrow").css("display" , "block")
   }else if(top >= 100 && top <= 499){
     $(".right1,.right2,.right3,.right4").css("right" , "-110px")
@@ -102,9 +94,6 @@ var swiper = new Swiper(".mySwiper", {
     modifier: 1,
     slideShadows: true,
   },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
 });
 
 function addpercen(){

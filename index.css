@@ -735,12 +735,12 @@ html, body {
 .resume .experience .workTime .line100 .point .goodByelight {
   width: 10px;
   height: 10px;
-  background-color: #505D40;
+  background-color: #8f4224;
   border-radius: 100%;
 }
 .resume .experience .workTime .line100 .point .goodByelight.light {
-  -webkit-box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
-          box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
+  -webkit-box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
+          box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
   -webkit-animation: none;
           animation: none;
 }
@@ -754,37 +754,37 @@ html, body {
 }
 @-webkit-keyframes blow {
   0% {
-    -webkit-box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
-            box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
+    -webkit-box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
+            box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
   }
   60% {
-    -webkit-box-shadow: 0 0 10px 10px #505D40;
-            box-shadow: 0 0 10px 10px #505D40;
+    -webkit-box-shadow: 0 0 10px 10px #8f4224;
+            box-shadow: 0 0 10px 10px #8f4224;
     opacity: 0;
   }
   100% {
     -webkit-transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
             transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
-    -webkit-box-shadow: 0 0 1px 1px #505D40;
-            box-shadow: 0 0 1px 1px #505D40;
+    -webkit-box-shadow: 0 0 1px 1px #8f4224;
+            box-shadow: 0 0 1px 1px #8f4224;
     opacity: 0;
   }
 }
 @keyframes blow {
   0% {
-    -webkit-box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
-            box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
+    -webkit-box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
+            box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
   }
   60% {
-    -webkit-box-shadow: 0 0 10px 10px #505D40;
-            box-shadow: 0 0 10px 10px #505D40;
+    -webkit-box-shadow: 0 0 10px 10px #8f4224;
+            box-shadow: 0 0 10px 10px #8f4224;
     opacity: 0;
   }
   100% {
     -webkit-transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
             transform: translate3d(-3rem, 0rem, 0) rotate(0deg) skewX(45deg) scale(1.5);
-    -webkit-box-shadow: 0 0 1px 1px #505D40;
-            box-shadow: 0 0 1px 1px #505D40;
+    -webkit-box-shadow: 0 0 1px 1px #8f4224;
+            box-shadow: 0 0 1px 1px #8f4224;
     opacity: 0;
   }
 }
@@ -899,12 +899,12 @@ html, body {
 .resume .experience .schoolBox .point .goodByelight {
   width: 10px;
   height: 10px;
-  background-color: #505D40;
+  background-color: #8f4224;
   border-radius: 100%;
 }
 .resume .experience .schoolBox .point .goodByelight.light {
-  -webkit-box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
-          box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
+  -webkit-box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
+          box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
   -webkit-animation: none;
           animation: none;
 }
@@ -918,12 +918,12 @@ html, body {
 }
 @keyframes blow {
   0% {
-    -webkit-box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
-            box-shadow: 0 0 50px 20px #505D40, 0 0 30px 10px #505D40, 0 0 15px 5px #505D40, 0 0 5px 1px #505D40;
+    -webkit-box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
+            box-shadow: 0 0 50px 20px #8f4224, 0 0 30px 10px #8f4224, 0 0 15px 5px #8f4224, 0 0 5px 1px #8f4224;
   }
   60% {
-    -webkit-box-shadow: 0 0 10px 10px #505D40;
-            box-shadow: 0 0 10px 10px #505D40;
+    -webkit-box-shadow: 0 0 10px 10px #8f4224;
+            box-shadow: 0 0 10px 10px #8f4224;
     opacity: 0;
   }
   100% {
